@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://xochiel.net/webapp/laponderosabar/ -->
+<html lang="es" class="notranslate"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Carta digital - Bar La Ponderosa</title>
+    <link href="./Carta digital - Bar La Ponderosa_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #c92a2a;
+            --primary-dark: #a61e1e;
+            --primary-light: #ffe3e3;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-dark: #212529;
+            --text-muted: #6c757d;
+            --border-color: #e9ecef;
+            --warning-bg: #fff9db;
+            --warning-border: #ffe066;
+            --warning-text: #856404;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
+            --radius-lg: 16px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            padding-bottom: 120px;
+            line-height: 1.5;
+        }
+
+        .top-bar {
+            background: #111111;
+            padding: 8px 16px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-bottom: 1px solid #2d3436;
+        }
+
+        .lang-selector-group {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .lang-btn {
+            background: #2b2b2b;
+            color: #d1d5db;
+            border: 1px solid #404040;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
+            color: white;
+            padding: 24px 20px 20px;
+            border-bottom-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .header-logo {
+            max-width: 160px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px auto;
+        }
+
+        header p.subtitle {
+            font-size: 0.95rem;
+            color: #adb5bd;
+            margin-bottom: 12px;
+        }
+
+        .notice-banner {
+            background: #fff3bf;
+            border: 1px solid #ffe066;
+            color: #744210;
+            border-radius: var(--radius-md);
+            padding: 12px 16px;
+            margin: 12px auto;
+            max-width: 760px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            animation: pulse-notice 2.5s infinite ease-in-out;
+        }
+
+        @keyframes pulse-notice {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.015); }
+        }
+
+        .header-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        @media (min-width: 480px) {
+            .header-actions {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .schedule-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.15);
+            color: #ffec99;
+        }
+
+        .pdf-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 2px 8px rgba(201, 42, 42, 0.4);
+        }
+
+        .pdf-download-btn:active {
+            transform: scale(0.96);
+            background: var(--primary-dark);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .table-selector-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            margin: 16px auto 8px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .table-selector-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .table-selector-title {
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .table-select-dropdown {
+            background: #f1f3f5;
+            border: 1px solid #ced4da;
+            padding: 8px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            cursor: pointer;
+            outline: none;
+            transition: border-color 0.2s;
+            width: 100%;
+            max-width: 220px;
+        }
+
+        /* Ranking Widget Global */
+        .ranking-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            margin: 16px 0 20px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .ranking-header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .ranking-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ranking-badge-live {
+            background: #e6fcf5;
+            color: #0ca678;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 12px;
+            border: 1px solid #96f2d7;
+            text-transform: uppercase;
+        }
+
+        .ranking-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            background: #f8f9fa;
+            border: 1px solid var(--border-color);
+        }
+
+        .ranking-item.top-1 {
+            background: #fff9db;
+            border-color: #ffe066;
+        }
+
+        .rank-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .rank-pos {
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--primary);
+            width: 24px;
+        }
+
+        .rank-name {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+
+        .rank-count {
+            background: #e9ecef;
+            color: var(--text-dark);
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 12px;
+        }
+
+        .top-1 .rank-count {
+            background: var(--primary);
+            color: white;
+        }
+
+        .ranking-empty {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .category-nav-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 90;
+            background: rgba(248, 249, 250, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 0;
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .category-nav {
+            display: flex;
+            overflow-x: auto;
+            gap: 8px;
+            padding: 0 16px;
+            scrollbar-width: none;
+        }
+
+        .category-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .cat-btn {
+            white-space: nowrap;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            background: white;
+            color: var(--text-dark);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .cat-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: 0 3px 10px rgba(201, 42, 42, 0.3);
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin: 28px 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #111827;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        .items-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+
+        @media (min-width: 640px) {
+            .items-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .item-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .item-name {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        .item-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .allergens-container {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 6px;
+            flex-wrap: wrap;
+        }
+
+        .allergen-icon {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .item-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px dashed var(--border-color);
+        }
+
+        .price-tag-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .price-option {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .price-label {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .add-btn-group {
+            display: flex;
+            gap: 6px;
+        }
+
+        .btn-add {
+            border: none;
+            background: #f1f3f5;
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 0.78rem;
+            padding: 6px 12px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-add:hover, .btn-add:active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .cart-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.15);
+            padding: 12px 20px;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cart-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-count {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .cart-table-badge {
+            font-size: 0.78rem;
+            color: var(--primary-dark);
+            font-weight: 800;
+            background: var(--primary-light);
+            padding: 2px 8px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 2px;
+            width: fit-content;
+        }
+
+        .btn-cart-open {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(201, 42, 42, 0.35);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(4px);
+            z-index: 200;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-sheet {
+            position: fixed;
+            bottom: -100%;
+            left: 0; right: 0;
+            background: white;
+            border-top-left-radius: 24px;
+            border-top-right-radius: 24px;
+            max-width: 800px;
+            margin: 0 auto;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            z-index: 201;
+            transition: bottom 0.35s cubic-bezier(0.1, 0.9, 0.2, 1);
+        }
+
+        .modal-sheet.active {
+            bottom: 0;
+        }
+
+        .modal-header {
+            padding: 18px 20px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-close {
+            background: #f1f3f5;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            padding: 20px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .qty-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #f8f9fa;
+            padding: 4px 8px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .qty-btn {
+            border: none;
+            background: white;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .modal-footer {
+            padding: 16px 20px 24px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-action-clear {
+            background: #f8f9fa;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 12px 16px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .btn-action-waiter {
+            flex: 1;
+            background: #2b8a3e;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .waiter-view-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: white;
+            z-index: 300;
+            display: none;
+            flex-direction: column;
+            padding: 24px 20px;
+            overflow-y: auto;
+        }
+
+        .waiter-view-overlay.active {
+            display: flex;
+        }
+
+        .waiter-header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px dashed var(--border-color);
+        }
+
+        .waiter-ticket {
+            margin: 20px 0;
+            background: #fff9db;
+            border: 1px solid #ffe066;
+            border-radius: var(--radius-md);
+            padding: 18px;
+        }
+
+        .ticket-table-info {
+            background: white;
+            padding: 8px 12px;
+            border-radius: var(--radius-sm);
+            font-weight: 800;
+            color: var(--primary-dark);
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 12px;
+            border: 1px solid var(--warning-border);
+        }
+
+        .ticket-list {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .ticket-list li {
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn-back-menu {
+            background: var(--text-dark);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="lang-selector-group">
+            <button class="lang-btn active" onclick="setLanguage('es')">🇪🇸 ES</button>
+            <button class="lang-btn" onclick="setLanguage('en')">🇬🇧 EN</button>
+            <button class="lang-btn" onclick="setLanguage('fr')">🇫🇷 FR</button>
+            <button class="lang-btn" onclick="setLanguage('de')">🇩🇪 DE</button>
+        </div>
+    </div>
+
+    <header>
+        <img src="./Carta digital - Bar La Ponderosa_files/logoponde.png" class="header-logo" alt="Bar La Ponderosa" onerror="this.src='https://placehold.co/160x60/1a1a1a/ffffff?text=La+Ponderosa'">
+        <p class="subtitle" id="txt-header-title">Carta Digital - Bar La Ponderosa</p>
+        <p class="subtitle" id="txt-header-address">Te esperamos en Paseo de Extremadura 117, Monesterio (Badajoz)</p>
+        
+        <div class="notice-banner" id="txt-kitchen-alert">
+            <span>⚠️</span>
+            <span>¡Atención! Cocina solo fines de semana de 20:30 a 00:00h</span>
+        </div>
+
+        <div class="header-actions">
+            <a href="https://xochiel.net/webapp/laponderosabar/carta.pdf" download="Carta_La_Ponderosa.pdf" class="pdf-download-btn">
+                <span>📄</span>
+                <span id="txt-download-pdf">Descargar Carta PDF</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Selector de Mesa -->
+        <div class="table-selector-card">
+            <div class="table-selector-header">
+                <span class="table-selector-title">
+                    <span>🪑</span> <span id="txt-select-table-label">Mesa (Zona Terraza):</span>
+                </span>
+                <select id="table-select" class="table-select-dropdown" onchange="handleTableChange(this.value)"><option value="" disabled="" id="txt-opt-choose-table">Seleccionar Mesa</option><option value="A1">Mesa A1</option><option value="A2">Mesa A2</option><option value="A3">Mesa A3</option><option value="A4">Mesa A4</option><option value="A5">Mesa A5</option><option value="B1">Mesa B1</option><option value="B2">Mesa B2</option><option value="B3">Mesa B3</option><option value="B4">Mesa B4</option><option value="B5">Mesa B5</option><option value="B6">Mesa B6</option><option value="F1">Mesa F1</option><option value="F2">Mesa F2</option><option value="F3">Mesa F3</option><option value="F4">Mesa F4</option><option value="F5">Mesa F5</option><option value="F6">Mesa F6</option><option value="F7">Mesa F7</option><option value="F8">Mesa F8</option><option value="F9">Mesa F9</option><option value="F10">Mesa F10</option><option value="F11">Mesa F11</option><option value="F12">Mesa F12</option><option value="F13">Mesa F13</option><option value="F14">Mesa F14</option><option value="F15">Mesa F15</option><option value="F16">Mesa F16</option><option value="F17">Mesa F17</option><option value="F18">Mesa F18</option><option value="F19">Mesa F19</option><option value="F20">Mesa F20</option><option value="F21">Mesa F21</option><option value="F22">Mesa F22</option><option value="F23">Mesa F23</option><option value="F24">Mesa F24</option><option value="F25">Mesa F25</option></select>
+            </div>
+        </div>
+
+        <!-- Componente del Ranking Global -->
+        <div class="ranking-card">
+            <div class="ranking-header-wrapper">
+                <h3 class="ranking-title">
+                    <span>🔥</span> <span id="txt-ranking-title">Top 5 Más Pedidos</span>
+                </h3>
+                <span class="ranking-badge-live">● Live</span>
+            </div>
+            <div id="ranking-container" class="ranking-list">
+                    <div class="ranking-item top-1">
+                        <div class="rank-info">
+                            <span class="rank-pos">1º</span>
+                            <span class="rank-name">Brioche de Cerdo Desmigado (Ración)</span>
+                        </div>
+                        <span class="rank-count">198 ped.</span>
+                    </div>
+                
+                    <div class="ranking-item ">
+                        <div class="rank-info">
+                            <span class="rank-pos">2º</span>
+                            <span class="rank-name">Pollo Frito al Estilo Kentucky (Ración)</span>
+                        </div>
+                        <span class="rank-count">187 ped.</span>
+                    </div>
+                
+                    <div class="ranking-item ">
+                        <div class="rank-info">
+                            <span class="rank-pos">3º</span>
+                            <span class="rank-name">Calamares Fritos (Ración)</span>
+                        </div>
+                        <span class="rank-count">150 ped.</span>
+                    </div>
+                
+                    <div class="ranking-item ">
+                        <div class="rank-info">
+                            <span class="rank-pos">4º</span>
+                            <span class="rank-name">Croquetas de Boletus y Manzanas (Ración)</span>
+                        </div>
+                        <span class="rank-count">123 ped.</span>
+                    </div>
+                
+                    <div class="ranking-item ">
+                        <div class="rank-info">
+                            <span class="rank-pos">5º</span>
+                            <span class="rank-name">Salchipapas (Ración)</span>
+                        </div>
+                        <span class="rank-count">120 ped.</span>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="category-nav-wrapper">
+        <div class="category-nav">
+            <a href="https://xochiel.net/webapp/laponderosabar/#tapas" class="cat-btn active" id="cat-tapas">🍽️ Tapas y Raciones</a>
+            <a href="https://xochiel.net/webapp/laponderosabar/#montados" class="cat-btn" id="cat-montados">🥖 Montados y Bocatas</a>
+            <a href="https://xochiel.net/webapp/laponderosabar/#carnes" class="cat-btn" id="cat-carnes">🥩 Carnes</a>
+            <a href="https://xochiel.net/webapp/laponderosabar/#pescados" class="cat-btn" id="cat-pescados">🐟 Pescados</a>
+            <a href="https://xochiel.net/webapp/laponderosabar/#hamburguesas" class="cat-btn" id="cat-hamburguesas">🍔 Hamburguesas</a>
+            <a href="https://xochiel.net/webapp/laponderosabar/#perritos" class="cat-btn" id="cat-perritos">🌭 Perrito Caliente</a>
+        </div>
+    </div>
+
+    <div class="container" id="menu-container">
+                    <section id="tapas">
+                        <h2 class="section-title">🍽️ Tapas y Raciones</h2>
+                        <div class="items-grid">
+                
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Jamón Ibérico</div>
+                                
+                                
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">6,00 € <span class="price-label">Tapa</span></span><span class="price-option">18,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Jamón Ibérico (Tapa)')">+ Tapa</button><button class="btn-add" onclick="addToCart('Jamón Ibérico (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Lomo en Caña Ibérico</div>
+                                
+                                
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">6,00 € <span class="price-label">Tapa</span></span><span class="price-option">18,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Lomo en Caña Ibérico (Tapa)')">+ Tapa</button><button class="btn-add" onclick="addToCart('Lomo en Caña Ibérico (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Queso de Oveja</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/lacteos.png" alt="Lácteos" class="allergen-icon" title="Lácteos" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">4,00 € <span class="price-label">Tapa</span></span><span class="price-option">12,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Queso de Oveja (Tapa)')">+ Tapa</button><button class="btn-add" onclick="addToCart('Queso de Oveja (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Ensaladilla de Marisco</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/crustaceos.png" alt="Crustáceos" class="allergen-icon" title="Crustáceos" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/moluscos.png" alt="Moluscos" class="allergen-icon" title="Moluscos" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/huevos.png" alt="Huevos" class="allergen-icon" title="Huevos" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">5,00 € <span class="price-label">Tapa</span></span><span class="price-option">9,50 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Ensaladilla de Marisco (Tapa)')">+ Tapa</button><button class="btn-add" onclick="addToCart('Ensaladilla de Marisco (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Salchipapas</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">4,50 € <span class="price-label">Tapa</span></span><span class="price-option">9,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Salchipapas (Tapa)')">+ Tapa</button><button class="btn-add" onclick="addToCart('Salchipapas (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Patatas Braviolis</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/huevos.png" alt="Huevos" class="allergen-icon" title="Huevos" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">9,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Patatas Braviolis (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Croquetas de Boletus y Manzanas</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/lacteos.png" alt="Lácteos" class="allergen-icon" title="Lácteos" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">5,00 € <span class="price-label">Tapa</span></span><span class="price-option">10,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Croquetas de Boletus y Manzanas (Tapa)')">+ Tapa</button><button class="btn-add" onclick="addToCart('Croquetas de Boletus y Manzanas (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Ensalada de Queso Frito</div>
+                                <div class="item-desc">Con vinagreta de frutos rojos</div>
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/lacteos.png" alt="Lácteos" class="allergen-icon" title="Lácteos" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/cascaras-frutos-secos.png" alt="Frutos Secos" class="allergen-icon" title="Frutos Secos" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">12,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Ensalada de Queso Frito (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Caracoles</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/moluscos.png" alt="Moluscos" class="allergen-icon" title="Moluscos" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">3,50 € <span class="price-label">Tapa</span></span><span class="price-option">6,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Caracoles (Tapa)')">+ Tapa</button><button class="btn-add" onclick="addToCart('Caracoles (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        </div>
+                    </section>
+                
+                    <section id="montados">
+                        <h2 class="section-title">🥖 Montados y Bocatas</h2>
+                        <div class="items-grid">
+                
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Jamón Ibérico</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">3,50 € <span class="price-label">Montado</span></span><span class="price-option">6,50 € <span class="price-label">Bocata</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Jamón Ibérico (Montado)')">+ Montado</button><button class="btn-add" onclick="addToCart('Jamón Ibérico (Bocata)')">+ Bocata</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Lomo Caña Ibérico</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">3,50 € <span class="price-label">Montado</span></span><span class="price-option">6,50 € <span class="price-label">Bocata</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Lomo Caña Ibérico (Montado)')">+ Montado</button><button class="btn-add" onclick="addToCart('Lomo Caña Ibérico (Bocata)')">+ Bocata</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Queso Oveja</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/lacteos.png" alt="Lácteos" class="allergen-icon" title="Lácteos" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">3,00 € <span class="price-label">Montado</span></span><span class="price-option">5,50 € <span class="price-label">Bocata</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Queso Oveja (Montado)')">+ Montado</button><button class="btn-add" onclick="addToCart('Queso Oveja (Bocata)')">+ Bocata</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Lomo Plancha</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">3,00 € <span class="price-label">Montado</span></span><span class="price-option">5,50 € <span class="price-label">Bocata</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Lomo Plancha (Montado)')">+ Montado</button><button class="btn-add" onclick="addToCart('Lomo Plancha (Bocata)')">+ Bocata</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Lomo Plancha con Queso</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/lacteos.png" alt="Lácteos" class="allergen-icon" title="Lácteos" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">3,50 € <span class="price-label">Montado</span></span><span class="price-option">6,50 € <span class="price-label">Bocata</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Lomo Plancha con Queso (Montado)')">+ Montado</button><button class="btn-add" onclick="addToCart('Lomo Plancha con Queso (Bocata)')">+ Bocata</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Pepito Gambas Alioli</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/crustaceos.png" alt="Crustáceos" class="allergen-icon" title="Crustáceos" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/huevos.png" alt="Huevos" class="allergen-icon" title="Huevos" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">4,00 € <span class="price-label">Montado</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Pepito Gambas Alioli (Montado)')">+ Montado</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Serranito de Lomo</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">6,50 € <span class="price-label">Bocata</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Serranito de Lomo (Bocata)')">+ Bocata</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Bocata de Calamares</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/moluscos.png" alt="Moluscos" class="allergen-icon" title="Moluscos" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">6,00 € <span class="price-label">Bocata</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Bocata de Calamares (Bocata)')">+ Bocata</button></div>
+                            </div>
+                        </div>
+                    
+                        </div>
+                    </section>
+                
+                    <section id="carnes">
+                        <h2 class="section-title">🥩 Carnes</h2>
+                        <div class="items-grid">
+                
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Pollo Frito al Estilo Kentucky</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">12,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Pollo Frito al Estilo Kentucky (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Churrasco de Cerdo</div>
+                                
+                                
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">12,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Churrasco de Cerdo (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Lomo Plancha</div>
+                                
+                                
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">5,00 € <span class="price-label">Tapa</span></span><span class="price-option">10,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Lomo Plancha (Tapa)')">+ Tapa</button><button class="btn-add" onclick="addToCart('Lomo Plancha (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Brioche de Cerdo Desmigado</div>
+                                <div class="item-desc">Con salsa barbacoa</div>
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/mostaza.png" alt="Mostaza" class="allergen-icon" title="Mostaza" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">8,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Brioche de Cerdo Desmigado (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Guarrito Frito</div>
+                                
+                                
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">6,50 € <span class="price-label">Tapa</span></span><span class="price-option">13,50 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Guarrito Frito (Tapa)')">+ Tapa</button><button class="btn-add" onclick="addToCart('Guarrito Frito (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        </div>
+                    </section>
+                
+                    <section id="pescados">
+                        <h2 class="section-title">🐟 Pescados</h2>
+                        <div class="items-grid">
+                
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Tomate con Melva</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/pescado.png" alt="Pescado" class="allergen-icon" title="Pescado" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">10,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Tomate con Melva (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Calamares Fritos</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/moluscos.png" alt="Moluscos" class="allergen-icon" title="Moluscos" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">5,50 € <span class="price-label">Tapa</span></span><span class="price-option">12,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Calamares Fritos (Tapa)')">+ Tapa</button><button class="btn-add" onclick="addToCart('Calamares Fritos (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Chocos Fritos</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/moluscos.png" alt="Moluscos" class="allergen-icon" title="Moluscos" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">6,50 € <span class="price-label">Tapa</span></span><span class="price-option">13,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Chocos Fritos (Tapa)')">+ Tapa</button><button class="btn-add" onclick="addToCart('Chocos Fritos (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Rosada al Limón</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/pescado.png" alt="Pescado" class="allergen-icon" title="Pescado" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">12,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Rosada al Limón (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Chipirones Plancha</div>
+                                
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/moluscos.png" alt="Moluscos" class="allergen-icon" title="Moluscos" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">12,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Chipirones Plancha (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Tataki de Atún Rojo</div>
+                                <div class="item-desc">Con toque de wasabi</div>
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/pescado.png" alt="Pescado" class="allergen-icon" title="Pescado" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/granos-sesamo.png" alt="Sésamo" class="allergen-icon" title="Sésamo" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/mostaza.png" alt="Mostaza" class="allergen-icon" title="Mostaza" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">12,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Tataki de Atún Rojo (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Tartar de Salmón Marinado</div>
+                                <div class="item-desc">Con chutney de mango</div>
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/pescado.png" alt="Pescado" class="allergen-icon" title="Pescado" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/mostaza.png" alt="Mostaza" class="allergen-icon" title="Mostaza" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">12,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Tartar de Salmón Marinado (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Pan Bao de Salmón</div>
+                                <div class="item-desc">2 unidades</div>
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/pescado.png" alt="Pescado" class="allergen-icon" title="Pescado" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/granos-sesamo.png" alt="Sésamo" class="allergen-icon" title="Sésamo" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">6,00 € <span class="price-label">Ración</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Pan Bao de Salmón (Ración)')">+ Ración</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Tortillita de Camarones</div>
+                                <div class="item-desc">Precio por unidad</div>
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/crustaceos.png" alt="Crustáceos" class="allergen-icon" title="Crustáceos" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">3,50 € <span class="price-label">Unidad</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Tortillita de Camarones (Unidad)')">+ Pedir</button></div>
+                            </div>
+                        </div>
+                    
+                        </div>
+                    </section>
+                
+                    <section id="hamburguesas">
+                        <h2 class="section-title">🍔 Hamburguesas</h2>
+                        <div class="items-grid">
+                
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Hamburguesa Clásica</div>
+                                <div class="item-desc">150g Mixta con bacon, queso y verduras</div>
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/lacteos.png" alt="Lácteos" class="allergen-icon" title="Lácteos" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/granos-sesamo.png" alt="Sésamo" class="allergen-icon" title="Sésamo" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">7,00 € <span class="price-label">Unidad</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Hamburguesa Clásica (Unidad)')">+ Pedir</button></div>
+                            </div>
+                        </div>
+                    
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Hamburguesa Gourmet</div>
+                                <div class="item-desc">200g Retinto, verduras, topping de bacon, rulo de cabra y cebolla caramelizada</div>
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/lacteos.png" alt="Lácteos" class="allergen-icon" title="Lácteos" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/granos-sesamo.png" alt="Sésamo" class="allergen-icon" title="Sésamo" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">10,00 € <span class="price-label">Unidad</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Hamburguesa Gourmet (Unidad)')">+ Pedir</button></div>
+                            </div>
+                        </div>
+                    
+                        </div>
+                    </section>
+                
+                    <section id="perritos">
+                        <h2 class="section-title">🌭 Perrito Caliente</h2>
+                        <div class="items-grid">
+                
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">Perrito Caliente</div>
+                                <div class="item-desc">Con cebolla crujiente y mayonesa de achiote</div>
+                                <div class="allergens-container"><img src="./Carta digital - Bar La Ponderosa_files/cereales-gluten.png" alt="Gluten" class="allergen-icon" title="Gluten" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/huevos.png" alt="Huevos" class="allergen-icon" title="Huevos" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/mostaza.png" alt="Mostaza" class="allergen-icon" title="Mostaza" onerror="this.style.display='none'"><img src="./Carta digital - Bar La Ponderosa_files/granos-sesamo.png" alt="Sésamo" class="allergen-icon" title="Sésamo" onerror="this.style.display='none'"></div>
+                            </div>
+                            <div class="item-actions">
+                                <div class="price-tag-group"><span class="price-option">4,50 € <span class="price-label">Unidad</span></span></div>
+                                <div class="add-btn-group"><button class="btn-add" onclick="addToCart('Perrito Caliente (Unidad)')">+ Pedir</button></div>
+                            </div>
+                        </div>
+                    
+                        </div>
+                    </section>
+                </div>
+
+    <div class="cart-bar">
+        <div class="cart-info">
+            <span class="cart-count" id="cart-count-text">0 artículos seleccionados</span>
+            <span class="cart-table-badge" id="cart-table-badge">Mesa: A1 (Terraza)</span>
+        </div>
+        <button class="btn-cart-open" onclick="openModal()">
+            <span id="txt-view-list">Ver mi lista</span> 🛒
+        </button>
+    </div>
+
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-sheet" id="modal-sheet">
+        <div class="modal-header">
+            <h2 id="txt-modal-title">📝 Tu Lista para el Camarero</h2>
+            <button class="btn-close" onclick="closeModal()">✕</button>
+        </div>
+        <div class="modal-body" id="modal-body"></div>
+        <div class="modal-footer" id="modal-footer">
+            <button class="btn-action-clear" id="txt-btn-clear" onclick="clearCart()">Vaciar</button>
+            <button class="btn-action-waiter" id="txt-btn-show-waiter" onclick="showWaiterTicket()">Mostrar al camarero 📱</button>
+        </div>
+    </div>
+
+    <div class="waiter-view-overlay" id="waiter-overlay">
+        <div class="waiter-header">
+            <p style="font-size: 0.9rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;" id="txt-waiter-subtitle">Muestra esta pantalla al personal</p>
+            <h2 id="txt-waiter-title">LISTA PARA EL CAMARERO</h2>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;" id="txt-waiter-hours">Horario de cocina: 20:30 a 00:00 h (Fines de semana)</p>
+        </div>
+
+        <div class="waiter-ticket">
+            <div class="ticket-table-info" id="ticket-table-display">Mesa: A1 (Terraza)</div>
+            <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); border-bottom: 1px solid #ffe066; padding-bottom: 6px;" id="txt-ticket-summary">Resumen del pedido</div>
+            <ul class="ticket-list" id="ticket-list"></ul>
+        </div>
+
+        <button class="btn-back-menu" id="txt-btn-back-menu" onclick="closeWaiterTicket()">Volver a la Carta</button>
+    </div>
+
+    <script>
+        let currentLang = 'es';
+        let selectedTable = 'A1';
+        let cart = [];
+
+        const tables = [];
+        for (let i = 1; i <= 5; i++) tables.push(`A${i}`);
+        for (let i = 1; i <= 6; i++) tables.push(`B${i}`);
+        for (let i = 1; i <= 25; i++) tables.push(`F${i}`);
+
+        const uiTranslations = {
+            es: {
+                headerTitle: "Carta Digital - Bar La Ponderosa",
+                headerAddress: "Te esperamos en Paseo de Extremadura 117, Monesterio (Badajoz)",
+                kitchenAlert: "¡Atención! Cocina solo fines de semana de 20:30 a 00:00h",
+                scheduleBadge: "Horario Comida: Fines de Semana 20:30 a 00:00 h",
+                downloadPdf: "Descargar Carta PDF",
+                selectTableLabel: "Mesa (Zona Terraza):",
+                chooseTableOpt: "Seleccionar Mesa",
+                rankingTitle: "Top 5 Más Pedidos",
+                rankingEmpty: "No hay registros acumulados aún.",
+                catTapas: "🍽️ Tapas y Raciones",
+                catMontados: "🥖 Montados y Bocatas",
+                catCarnes: "🥩 Carnes",
+                catPescados: "🐟 Pescados",
+                catHamburguesas: "🍔 Hamburguesas",
+                catPerritos: "🌭 Perrito Caliente",
+                btnTapa: "+ Tapa",
+                btnRacion: "+ Ración",
+                btnMontado: "+ Montado",
+                btnBocata: "+ Bocata",
+                btnOrder: "+ Pedir",
+                lblTapa: "Tapa",
+                lblRacion: "Ración",
+                lblMontado: "Montado",
+                lblBocata: "Bocata",
+                lblUnit: "Unidad",
+                cartSelected: "artículo",
+                cartSelectedPlural: "artículos",
+                cartSelectedWord: "seleccionado",
+                cartSelectedWordPlural: "seleccionados",
+                viewList: "Ver mi lista",
+                modalTitle: "📝 Tu Lista para el Camarero",
+                clear: "Vaciar",
+                showWaiter: "Mostrar al camarero 📱",
+                emptyCartMsg: "No has añadido ningún artículo todavía.",
+                emptyCartSub: "Pulsa en los botones de la carta para añadir tus opciones.",
+                waiterSubtitle: "Muestra esta pantalla al personal",
+                waiterTitle: "LISTA PARA EL CAMARERO",
+                waiterHours: "Horario de cocina: 20:30 a 00:00 h (Fines de semana)",
+                ticketSummary: "Resumen del pedido",
+                backToMenu: "Volver a la Carta",
+                tablePrefix: "Mesa: ",
+                zoneTerraza: " (Terraza)"
+            },
+            en: {
+                headerTitle: "Digital Menu - Bar La Ponderosa",
+                headerAddress: "Find us at Paseo de Extremadura 117, Monesterio (Badajoz)",
+                kitchenAlert: "Attention! Kitchen open ONLY WEEKENDS from 20:30 to 00:00",
+                scheduleBadge: "Food Hours: Weekends 20:30 to 00:00",
+                downloadPdf: "Download PDF Menu",
+                selectTableLabel: "Table (Terrace Zone):",
+                chooseTableOpt: "Select Table",
+                rankingTitle: "Top 5 Ordered Dishes (Overall)",
+                rankingEmpty: "No global orders recorded yet.",
+                catTapas: "🍽️ Tapas & Portions",
+                catMontados: "🥖 Sandwiches",
+                catCarnes: "🥩 Meats",
+                catPescados: "🐟 Fish & Seafood",
+                catHamburguesas: "🍔 Burgers",
+                catPerritos: "🌭 Hot Dog",
+                btnTapa: "+ Tapa",
+                btnRacion: "+ Portion",
+                btnMontado: "+ Mini Sandwich",
+                btnBocata: "+ Sandwich",
+                btnOrder: "+ Add",
+                lblTapa: "Tapa",
+                lblRacion: "Portion",
+                lblMontado: "Mini Sandwich",
+                lblBocata: "Sandwich",
+                lblUnit: "Unit",
+                cartSelected: "item",
+                cartSelectedPlural: "items",
+                cartSelectedWord: "selected",
+                cartSelectedWordPlural: "selected",
+                viewList: "View my order",
+                modalTitle: "📝 Your List for the Waiter",
+                clear: "Clear",
+                showWaiter: "Show to Waiter 📱",
+                emptyCartMsg: "Your list is currently empty.",
+                emptyCartSub: "Tap on the menu items to add them here.",
+                waiterSubtitle: "Show this screen to the staff",
+                waiterTitle: "WAITER SUMMARY ORDER",
+                waiterHours: "Kitchen hours: 20:30 to 00:00 (Weekends only)",
+                ticketSummary: "Order summary",
+                backToMenu: "Back to Menu",
+                tablePrefix: "Table: ",
+                zoneTerraza: " (Terrace)"
+            },
+            fr: {
+                headerTitle: "Menu Numérique - Bar La Ponderosa",
+                headerAddress: "Paseo de Extremadura 117, Monesterio (Badajoz)",
+                kitchenAlert: "Attention! Cuisine ouverte UNIQUEMENT LE WEEK-END de 20:30 à 00:00",
+                scheduleBadge: "Horaire Cuisine: Week-ends 20:30 à 00:00",
+                downloadPdf: "Télécharger le PDF",
+                selectTableLabel: "Table (Zone Terrasse):",
+                chooseTableOpt: "Sélectionner Table",
+                rankingTitle: "Top 5 Plats Les Plus Commandés (Global)",
+                rankingEmpty: "Aucune commande enregistrée pour l'instant.",
+                catTapas: "🍽️ Tapas et Rations",
+                catMontados: "🥖 Sandwichs",
+                catCarnes: "🥩 Viandes",
+                catPescados: "🐟 Poissons",
+                catHamburguesas: "🍔 Burgers",
+                catPerritos: "🌭 Hot-Dog",
+                btnTapa: "+ Tapa",
+                btnRacion: "+ Portion",
+                btnMontado: "+ Mini-Sandwich",
+                btnBocata: "+ Sandwich",
+                btnOrder: "+ Ajouter",
+                lblTapa: "Tapa",
+                lblRacion: "Portion",
+                lblMontado: "Mini-Sandwich",
+                lblBocata: "Sandwich",
+                lblUnit: "Unité",
+                cartSelected: "article",
+                cartSelectedPlural: "articles",
+                cartSelectedWord: "sélectionné",
+                cartSelectedWordPlural: "sélectionnés",
+                viewList: "Voir ma liste",
+                modalTitle: "📝 Liste pour le Serveur",
+                clear: "Vider",
+                showWaiter: "Montrer au serveur 📱",
+                emptyCartMsg: "Votre liste est vide.",
+                emptyCartSub: "Cliquez sur les boutons pour ajouter des plats.",
+                waiterSubtitle: "Montrez cet écran au serveur",
+                waiterTitle: "COMMANDE POUR LE SERVEUR",
+                waiterHours: "Cuisine: 20:30 à 00:00 (Week-end seulement)",
+                ticketSummary: "Résumé de la commande",
+                backToMenu: "Retour au Menu",
+                tablePrefix: "Table: ",
+                zoneTerraza: " (Terrasse)"
+            },
+            de: {
+                headerTitle: "Digitale Speisekarte - Bar La Ponderosa",
+                headerAddress: "Paseo de Extremadura 117, Monesterio (Badajoz)",
+                kitchenAlert: "Achtung! Küche NUR AM WOCHENENDE von 20:30 bis 00:00 Uhr geöffnet",
+                scheduleBadge: "Küchenzeiten: Wochenende 20:30 bis 00:00",
+                downloadPdf: "PDF-Karte herunterladen",
+                selectTableLabel: "Tisch (Terrassenbereich):",
+                chooseTableOpt: "Tisch auswählen",
+                rankingTitle: "Top 5 Beliebteste Gerichte (Insgesamt)",
+                rankingEmpty: "Noch keine Bestellungen aufgezeichnet.",
+                catTapas: "🍽️ Tapas & Portionen",
+                catMontados: "🥖 Sandwiches",
+                catCarnes: "🥩 Fleischgerichte",
+                catPescados: "🐟 Fisch & Meeresfrüchte",
+                catHamburguesas: "🍔 Burger",
+                catPerritos: "🌭 Hot Dog",
+                btnTapa: "+ Tapa",
+                btnRacion: "+ Portion",
+                btnMontado: "+ Mini-Sandwich",
+                btnBocata: "+ Sandwich",
+                btnOrder: "+ Hinzufügen",
+                lblTapa: "Tapa",
+                lblRacion: "Portion",
+                lblMontado: "Mini-Sandwich",
+                lblBocata: "Sandwich",
+                lblUnit: "Stück",
+                cartSelected: "Artikel",
+                cartSelectedPlural: "Artikel",
+                cartSelectedWord: "ausgewählt",
+                cartSelectedWordPlural: "ausgewählt",
+                viewList: "Liste anzeigen",
+                modalTitle: "📝 Ihre Liste für den Kellner",
+                clear: "Leeren",
+                showWaiter: "Dem Kellner zeigen 📱",
+                emptyCartMsg: "Ihre Liste ist noch leer.",
+                emptyCartSub: "Klicken Sie auf die Schaltflächen, um Artikel hinzuzufügen.",
+                waiterSubtitle: "Zeigen Sie diesen Bildschirm dem Kellner",
+                waiterTitle: "BESTELLUNG FÜR DEN KELLNER",
+                waiterHours: "Küchenzeiten: 20:30 bis 00:00 Uhr (Nur am Wochenende)",
+                ticketSummary: "Zusammenfassung der Bestellung",
+                backToMenu: "Zurück zur Karte",
+                tablePrefix: "Tisch: ",
+                zoneTerraza: " (Terrasse)"
+            }
+        };
+
+        const menuData = [
+            {
+                category: "tapas",
+                items: [
+                    { id: "jamon", name: { es: "Jamón Ibérico", en: "Iberian Ham", fr: "Jambon Ibérique", de: "Iberischer Schinken" }, prices: [{ labelKey: "lblTapa", val: "6,00 €", key: "Tapa" }, { labelKey: "lblRacion", val: "18,00 €", key: "Ración" }], allergens: [] },
+                    { id: "lomo", name: { es: "Lomo en Caña Ibérico", en: "Cured Iberian Pork Loin", fr: "Longe de Porc Ibérique", de: "Iberisches Lendenfilet" }, prices: [{ labelKey: "lblTapa", val: "6,00 €", key: "Tapa" }, { labelKey: "lblRacion", val: "18,00 €", key: "Ración" }], allergens: [] },
+                    { id: "queso", name: { es: "Queso de Oveja", en: "Cured Sheep Cheese", fr: "Fromage de Brebis", de: "Schafskäse" }, prices: [{ labelKey: "lblTapa", val: "4,00 €", key: "Tapa" }, { labelKey: "lblRacion", val: "12,00 €", key: "Ración" }], allergens: [{ img: "lacteos.png", name: "Lácteos" }] },
+                    { id: "ensaladilla", name: { es: "Ensaladilla de Marisco", en: "Seafood Salad with Mayonnaise", fr: "Salade de Fruits de Mer", de: "Meeresfrüchte-Salat" }, prices: [{ labelKey: "lblTapa", val: "5,00 €", key: "Tapa" }, { labelKey: "lblRacion", val: "9,50 €", key: "Ración" }], allergens: [{ img: "crustaceos.png", name: "Crustáceos" }, { img: "moluscos.png", name: "Moluscos" }, { img: "huevos.png", name: "Huevos" }] },
+                    { id: "salchipapas", name: { es: "Salchipapas", en: "Fries with Sausages & Sauces", fr: "Frites aux Saucisses", de: "Pommes mit Würstchen" }, prices: [{ labelKey: "lblTapa", val: "4,50 €", key: "Tapa" }, { labelKey: "lblRacion", val: "9,00 €", key: "Ración" }], allergens: [{ img: "cereales-gluten.png", name: "Gluten" }] },
+                    { id: "braviolis", name: { es: "Patatas Braviolis", en: "Spicy & Garlic Sauce Potatoes", fr: "Pommes de Terre Braviolis", de: "Braviolis Kartoffeln" }, prices: [{ labelKey: "lblRacion", val: "9,00 €", key: "Ración" }], allergens: [{ img: "huevos.png", name: "Huevos" }, { img: "cereales-gluten.png", name: "Gluten" }] },
+                    { id: "croquetas", name: { es: "Croquetas de Boletus y Manzanas", en: "Mushroom & Apple Croquettes", fr: "Croquettes de Cèpes et Pomme", de: "Steinpilz-Apfel-Kroketten" }, prices: [{ labelKey: "lblTapa", val: "5,00 €", key: "Tapa" }, { labelKey: "lblRacion", val: "10,00 €", key: "Ración" }], allergens: [{ img: "cereales-gluten.png", name: "Gluten" }, { img: "lacteos.png", name: "Lácteos" }] },
+                    { id: "ensalada_queso", name: { es: "Ensalada de Queso Frito", en: "Fried Cheese Salad", fr: "Salade de Fromage Frit", de: "Frittierter Käsesalat" }, desc: { es: "Con vinagreta de frutos rojos", en: "With berry vinaigrette", fr: "Avec vinaigrette aux fruits rouges", de: "Mit Beeren-Vinaigrette" }, prices: [{ labelKey: "lblRacion", val: "12,00 €", key: "Ración" }], allergens: [{ img: "lacteos.png", name: "Lácteos" }, { img: "cascaras-frutos-secos.png", name: "Frutos Secos" }, { img: "cereales-gluten.png", name: "Gluten" }] },
+                    { id: "caracoles", name: { es: "Caracoles", en: "Snails in Sauce", fr: "Escargots en Sauce", de: "Schnecken in Soße" }, prices: [{ labelKey: "lblTapa", val: "3,50 €", key: "Tapa" }, { labelKey: "lblRacion", val: "6,00 €", key: "Ración" }], allergens: [{ img: "moluscos.png", name: "Moluscos" }] }
+                ]
+            },
+            {
+                category: "montados",
+                items: [
+                    { id: "m_jamon", name: { es: "Jamón Ibérico", en: "Iberian Ham Sandwich", fr: "Sandwich au Jambon Ibérique", de: "Iberisches Schinken-Sandwich" }, prices: [{ labelKey: "lblMontado", val: "3,50 €", key: "Montado" }, { labelKey: "lblBocata", val: "6,50 €", key: "Bocata" }], allergens: [{ img: "cereales-gluten.png", name: "Gluten" }] },
+                    { id: "m_lomo_cana", name: { es: "Lomo Caña Ibérico", en: "Cured Loin Sandwich", fr: "Sandwich de Longe Ibérique", de: "Iberisches Lenden-Sandwich" }, prices: [{ labelKey: "lblMontado", val: "3,50 €", key: "Montado" }, { labelKey: "lblBocata", val: "6,50 €", key: "Bocata" }], allergens: [{ img: "cereales-gluten.png", name: "Gluten" }] },
+                    { id: "m_queso", name: { es: "Queso Oveja", en: "Sheep Cheese Sandwich", fr: "Sandwich au Fromage de Brebis", de: "Schafskäse-Sandwich" }, prices: [{ labelKey: "lblMontado", val: "3,00 €", key: "Montado" }, { labelKey: "lblBocata", val: "5,50 €", key: "Bocata" }], allergens: [{ img: "cereales-gluten.png", name: "Gluten" }, { img: "lacteos.png", name: "Lácteos" }] },
+                    { id: "m_lomo_plancha", name: { es: "Lomo Plancha", en: "Grilled Pork Loin Sandwich", fr: "Sandwich Longe de Porc Grillée", de: "Gegrilltes Schweinelenden-Sandwich" }, prices: [{ labelKey: "lblMontado", val: "3,00 €", key: "Montado" }, { labelKey: "lblBocata", val: "5,50 €", key: "Bocata" }], allergens: [{ img: "cereales-gluten.png", name: "Gluten" }] },
+                    { id: "m_lomo_queso", name: { es: "Lomo Plancha con Queso", en: "Grilled Pork Loin & Cheese Sandwich", fr: "Sandwich Longe Grillée & Fromage", de: "Schweinelende mit Käse Sandwich" }, prices: [{ labelKey: "lblMontado", val: "3,50 €", key: "Montado" }, { labelKey: "lblBocata", val: "6,50 €", key: "Bocata" }], allergens: [{ img: "cereales-gluten.png", name: "Gluten" }, { img: "lacteos.png", name: "Lácteos" }] },
+                    { id: "pepito_gambas", name: { es: "Pepito Gambas Alioli", en: "Prawns & Aioli Mini Roll", fr: "Mini-Sandwich Crevettes Aïoli", de: "Garnelen-Alioli Baguette" }, prices: [{ labelKey: "lblMontado", val: "4,00 €", key: "Montado" }], allergens: [{ img: "cereales-gluten.png", name: "Gluten" }, { img: "crustaceos.png", name: "Crustáceos" }, { img: "huevos.png", name: "Huevos" }] },
+                    { id: "serranito", name: { es: "Serranito de Lomo", en: "Serranito Sandwich", fr: "Sandwich Serranito", de: "Serranito-Sandwich" }, prices: [{ labelKey: "lblBocata", val: "6,50 €", key: "Bocata" }], allergens: [{ img: "cereales-gluten.png", name: "Gluten" }] },
+                    { id: "bocata_calamares", name: { es: "Bocata de Calamares", en: "Fried Squid Sandwich", fr: "Sandwich aux Calamars", de: "Tintenfisch-Sandwich" }, prices: [{ labelKey: "lblBocata", val: "6,00 €", key: "Bocata" }], allergens: [{ img: "cereales-gluten.png", name: "Gluten" }, { img: "moluscos.png", name: "Moluscos" }] }
+                ]
+            },
+            {
+                category: "carnes",
+                items: [
+                    { id: "pollo_kentucky", name: { es: "Pollo Frito al Estilo Kentucky", en: "Kentucky-Style Fried Chicken", fr: "Poulet Frit Style Kentucky", de: "Frittiertes Hähnchen nach Kentucky-Art" }, prices: [{ labelKey: "lblRacion", val: "12,00 €", key: "Ración" }], allergens: [{ img: "cereales-gluten.png", name: "Gluten" }] },
+                    { id: "churrasco", name: { es: "Churrasco de Cerdo", en: "Grilled Pork Ribs", fr: "Travers de Porc Grillé", de: "Gegrillte Schweinerippchen" }, prices: [{ labelKey: "lblRacion", val: "12,00 €", key: "Ración" }], allergens: [] },
+                    { id: "lomo_plancha_plat", name: { es: "Lomo Plancha", en: "Grilled Pork Loin Plate", fr: "Longe de Porc Grillée", de: "Gegrillte Schweinelende" }, prices: [{ labelKey: "lblTapa", val: "5,00 €", key: "Tapa" }, { labelKey: "lblRacion", val: "10,00 €", key: "Ración" }], allergens: [] },
+                    { id: "brioche_cerdo", name: { es: "Brioche de Cerdo Desmigado", en: "Pulled Pork Brioche", fr: "Brioche au Porc Effiloché", de: "Pulled-Pork-Brioche" }, desc: { es: "Con salsa barbacoa", en: "With BBQ sauce", fr: "Avec sauce barbecue", de: "Mit Barbecue-Soße" }, prices: [{ labelKey: "lblRacion", val: "8,00 €", key: "Ración" }], allergens: [{ img: "cereales-gluten.png", name: "Gluten" }, { img: "mostaza.png", name: "Mostaza" }] },
+                    { id: "guarrito", name: { es: "Guarrito Frito", en: "Crispy Fried Suckling Pork", fr: "Cochon de Lait Frit", de: "Knusprig frittiertes Spanferkel" }, prices: [{ labelKey: "lblTapa", val: "6,50 €", key: "Tapa" }, { labelKey: "lblRacion", val: "13,50 €", key: "Ración" }], allergens: [] }
+                ]
+            },
+            {
+                category: "pescados",
+                items: [
+                    { id: "tomate_melva", name: { es: "Tomate con Melva", en: "Fresh Tomatoes with Frigate Tuna", fr: "Tomate au Thon Melva", de: "Tomaten mit Melva-Thunfisch" }, prices: [{ labelKey: "lblRacion", val: "10,00 €", key: "Ración" }], allergens: [{ img: "pescado.png", name: "Pescado" }] },
+                    { id: "calamares_fritos", name: { es: "Calamares Fritos", en: "Fried Squid Rings", fr: "Calamars Frits", de: "Frittierte Tintenfischringe" }, prices: [{ labelKey: "lblTapa", val: "5,50 €", key: "Tapa" }, { labelKey: "lblRacion", val: "12,00 €", key: "Ración" }], allergens: [{ img: "cereales-gluten.png", name: "Gluten" }, { img: "moluscos.png", name: "Moluscos" }] },
+                    { id: "chocos_fritos", name: { es: "Chocos Fritos", en: "Fried Cuttlefish", fr: "Seiches Frites", de: "Frittierter Tintenfisch" }, prices: [{ labelKey: "lblTapa", val: "6,50 €", key: "Tapa" }, { labelKey: "lblRacion", val: "13,00 €", key: "Ración" }], allergens: [{ img: "cereales-gluten.png", name: "Gluten" }, { img: "moluscos.png", name: "Moluscos" }] },
+                    { id: "rosada_limon", name: { es: "Rosada al Limón", en: "Battered Hake Fillet with Lemon", fr: "Poisson Rosada au Citron", de: "Seehecht-Filet in Zitronensoße" }, prices: [{ labelKey: "lblRacion", val: "12,00 €", key: "Ración" }], allergens: [{ img: "pescado.png", name: "Pescado" }, { img: "cereales-gluten.png", name: "Gluten" }] },
+                    { id: "chipirones", name: { es: "Chipirones Plancha", en: "Grilled Small Cuttlefish", fr: "Petits Calamars Grillés", de: "Gegrillte kleine Tintenfische" }, prices: [{ labelKey: "lblRacion", val: "12,00 €", key: "Ración" }], allergens: [{ img: "moluscos.png", name: "Moluscos" }] },
+                    { id: "tataki_atun", name: { es: "Tataki de Atún Rojo", en: "Red Tuna Tataki", fr: "Tataki de Thon Rouge", de: "Roter Thunfisch-Tataki" }, desc: { es: "Con toque de wasabi", en: "With a touch of wasabi", fr: "Avec une touche de wasabi", de: "Mit einem Hauch Wasabi" }, prices: [{ labelKey: "lblRacion", val: "12,00 €", key: "Ración" }], allergens: [{ img: "pescado.png", name: "Pescado" }, { img: "granos-sesamo.png", name: "Sésamo" }, { img: "mostaza.png", name: "Mostaza" }] },
+                    { id: "tartar_salmon", name: { es: "Tartar de Salmón Marinado", en: "Marinated Salmon Tartare", fr: "Tartare de Saumon Mariné", de: "Lachs-Tatar" }, desc: { es: "Con chutney de mango", en: "With mango chutney", fr: "Avec chutney de mangue", de: "Mit Mango-Chutney" }, prices: [{ labelKey: "lblRacion", val: "12,00 €", key: "Ración" }], allergens: [{ img: "pescado.png", name: "Pescado" }, { img: "mostaza.png", name: "Mostaza" }] },
+                    { id: "pan_bao_salmon", name: { es: "Pan Bao de Salmón", en: "Salmon Bao Buns", fr: "Pains Bao au Saumon", de: "Lachs-Bao-Brötchen" }, desc: { es: "2 unidades", en: "2 units", fr: "2 pièces", de: "2 Stück" }, prices: [{ labelKey: "lblRacion", val: "6,00 €", key: "Ración" }], allergens: [{ img: "pescado.png", name: "Pescado" }, { img: "cereales-gluten.png", name: "Gluten" }, { img: "granos-sesamo.png", name: "Sésamo" }] },
+                    { id: "tortillita_camarones", name: { es: "Tortillita de Camarones", en: "Crispy Shrimp Fritter", fr: "Galette de Crevettes", de: "Garnelen-Omelett" }, desc: { es: "Precio por unidad", en: "Price per unit", fr: "Prix par unité", de: "Preis pro Stück" }, prices: [{ labelKey: "lblUnit", val: "3,50 €", key: "Unidad" }], allergens: [{ img: "crustaceos.png", name: "Crustáceos" }, { img: "cereales-gluten.png", name: "Gluten" }] }
+                ]
+            },
+            {
+                category: "hamburguesas",
+                items: [
+                    { id: "burger_clasica", name: { es: "Hamburguesa Clásica", en: "Classic Burger", fr: "Burger Classique", de: "Klassischer Burger" }, desc: { es: "150g Mixta con bacon, queso y verduras", en: "150g Mixed beef/pork with bacon, cheese and veggies", fr: "150g Viande mixte, bacon, fromage et légumes", de: "150g Gemischt mit Speck, Käse und Gemüse" }, prices: [{ labelKey: "lblUnit", val: "7,00 €", key: "Unidad" }], allergens: [{ img: "cereales-gluten.png", name: "Gluten" }, { img: "lacteos.png", name: "Lácteos" }, { img: "granos-sesamo.png", name: "Sésamo" }] },
+                    { id: "burger_gourmet", name: { es: "Hamburguesa Gourmet", en: "Retinto Gourmet Burger", fr: "Burger Gourmet Retinto", de: "Retinto Gourmet Burger" }, desc: { es: "200g Retinto, verduras, topping de bacon, rulo de cabra y cebolla caramelizada", en: "200g Retinto Beef, goat cheese, bacon and caramelized onion", fr: "200g Bœuf Retinto, fromage de chèvre, bacon et oignons caramélisés", de: "200g Retinto-Rind, Ziegenkäse, Speck und karamellisierte Zwiebeln" }, prices: [{ labelKey: "lblUnit", val: "10,00 €", key: "Unidad" }], allergens: [{ img: "cereales-gluten.png", name: "Gluten" }, { img: "lacteos.png", name: "Lácteos" }, { img: "granos-sesamo.png", name: "Sésamo" }] }
+                ]
+            },
+            {
+                category: "perritos",
+                items: [
+                    { id: "perrito_caliente", name: { es: "Perrito Caliente", en: "Gourmet Hot Dog", fr: "Hot-Dog Gourmand", de: "Gourmet Hot Dog" }, desc: { es: "Con cebolla crujiente y mayonesa de achiote", en: "With crispy onions and achiote mayo", fr: "Oignons croustillants et mayonnaise achiote", de: "Mit knusprigen Zwiebeln und Achiote-Mayonnaise" }, prices: [{ labelKey: "lblUnit", val: "4,50 €", key: "Unidad" }], allergens: [{ img: "cereales-gluten.png", name: "Gluten" }, { img: "huevos.png", name: "Huevos" }, { img: "mostaza.png", name: "Mostaza" }, { img: "granos-sesamo.png", name: "Sésamo" }] }
+                ]
+            }
+        ];
+
+        window.addEventListener('DOMContentLoaded', () => {
+            populateTableSelect();
+            renderMenu();
+            updateUI();
+            
+            // Carga inicial del ranking desde el servidor
+            fetchGlobalRanking();
+
+            // Refresco automático cada 10 segundos
+            setInterval(fetchGlobalRanking, 10000);
+        });
+
+        /* --- Conexión con el Servidor Backend (PHP/JSON) --- */
+        async function fetchGlobalRanking() {
+            try {
+                const response = await fetch('api.php');
+                if (!response.ok) throw new Error("Error en servidor");
+                const stats = await response.json();
+                renderGlobalRanking(stats);
+            } catch (e) {
+                console.error("No se pudo obtener el ranking del servidor:", e);
+                const container = document.getElementById('ranking-container');
+                if (container && container.innerHTML.trim() === '') {
+                    container.innerHTML = `<p class="ranking-empty">Cargando datos globales del servidor...</p>`;
+                }
+            }
+        }
+
+        async function saveOrderToServerJSON(itemsToSave) {
+            try {
+                const response = await fetch('api.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(itemsToSave)
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    renderGlobalRanking(result.data);
+                }
+            } catch (e) {
+                console.error("Error al guardar pedido en el servidor:", e);
+            }
+        }
+
+        function renderGlobalRanking(stats) {
+            const container = document.getElementById('ranking-container');
+            const t = uiTranslations[currentLang];
+
+            if (!stats || Object.keys(stats).length === 0) {
+                container.innerHTML = `<p class="ranking-empty">${t.rankingEmpty}</p>`;
+                return;
+            }
+
+            const itemsArray = Object.keys(stats).map(name => ({
+                name: name,
+                count: stats[name]
+            }));
+
+            // Top 5 ordenado de mayor a menor
+            const top5 = itemsArray.sort((a, b) => b.count - a.count).slice(0, 5);
+
+            let html = '';
+            top5.forEach((item, index) => {
+                const posClass = index === 0 ? 'top-1' : '';
+                html += `
+                    <div class="ranking-item ${posClass}">
+                        <div class="rank-info">
+                            <span class="rank-pos">${index + 1}º</span>
+                            <span class="rank-name">${item.name}</span>
+                        </div>
+                        <span class="rank-count">${item.count} ped.</span>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        function populateTableSelect() {
+            const select = document.getElementById('table-select');
+            select.innerHTML = `<option value="" disabled id="txt-opt-choose-table">${uiTranslations[currentLang].chooseTableOpt}</option>`;
+            
+            tables.forEach(t => {
+                const opt = document.createElement('option');
+                opt.value = t;
+                opt.textContent = `Mesa ${t}`;
+                if (t === selectedTable) opt.selected = true;
+                select.appendChild(opt);
+            });
+        }
+
+        function handleTableChange(val) {
+            selectedTable = val;
+            updateCartUI();
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.toLowerCase().includes(lang)) {
+                    btn.classList.add('active');
+                }
+            });
+
+            updateUI();
+            renderMenu();
+            renderModal();
+            fetchGlobalRanking();
+        }
+
+        function updateUI() {
+            const t = uiTranslations[currentLang];
+            
+            document.getElementById('txt-header-title').innerText = t.headerTitle;
+            document.getElementById('txt-header-address').innerText = t.headerAddress;
+            document.getElementById('txt-kitchen-alert').children[1].innerText = t.kitchenAlert;
+            
+            const scheduleElem = document.getElementById('txt-schedule-badge');
+            if (scheduleElem) scheduleElem.innerText = t.scheduleBadge;
+            
+            document.getElementById('txt-download-pdf').innerText = t.downloadPdf;
+            document.getElementById('txt-select-table-label').innerText = t.selectTableLabel;
+            document.getElementById('txt-ranking-title').innerText = t.rankingTitle;
+            
+            const tableOpt = document.getElementById('txt-opt-choose-table');
+            if(tableOpt) tableOpt.innerText = t.chooseTableOpt;
+
+            document.getElementById('cat-tapas').innerText = t.catTapas;
+            document.getElementById('cat-montados').innerText = t.catMontados;
+            document.getElementById('cat-carnes').innerText = t.catCarnes;
+            document.getElementById('cat-pescados').innerText = t.catPescados;
+            document.getElementById('cat-hamburguesas').innerText = t.catHamburguesas;
+            document.getElementById('cat-perritos').innerText = t.catPerritos;
+
+            document.getElementById('txt-view-list').innerText = t.viewList;
+            document.getElementById('txt-modal-title').innerText = t.modalTitle;
+            document.getElementById('txt-btn-clear').innerText = t.clear;
+            document.getElementById('txt-btn-show-waiter').innerText = t.showWaiter;
+
+            document.getElementById('txt-waiter-subtitle').innerText = t.waiterSubtitle;
+            document.getElementById('txt-waiter-title').innerText = t.waiterTitle;
+            document.getElementById('txt-waiter-hours').innerText = t.waiterHours;
+            document.getElementById('txt-ticket-summary').innerText = t.ticketSummary;
+            document.getElementById('txt-btn-back-menu').innerText = t.backToMenu;
+
+            updateCartUI();
+        }
+
+        function renderMenu() {
+            const container = document.getElementById('menu-container');
+            const t = uiTranslations[currentLang];
+            let html = '';
+
+            menuData.forEach(catGroup => {
+                let catTitle = t.catTapas;
+                if (catGroup.category === "montados") catTitle = t.catMontados;
+                if (catGroup.category === "carnes") catTitle = t.catCarnes;
+                if (catGroup.category === "pescados") catTitle = t.catPescados;
+                if (catGroup.category === "hamburguesas") catTitle = t.catHamburguesas;
+                if (catGroup.category === "perritos") catTitle = t.catPerritos;
+
+                html += `
+                    <section id="${catGroup.category}">
+                        <h2 class="section-title">${catTitle}</h2>
+                        <div class="items-grid">
+                `;
+
+                catGroup.items.forEach(item => {
+                    const name = item.name[currentLang] || item.name['es'];
+                    const desc = item.desc ? (item.desc[currentLang] || item.desc['es']) : '';
+
+                    let allergensHtml = '';
+                    if (item.allergens && item.allergens.length > 0) {
+                        allergensHtml = '<div class="allergens-container">';
+                        item.allergens.forEach(alg => {
+                            allergensHtml += `<img src="${alg.img}" alt="${alg.name}" class="allergen-icon" title="${alg.name}" onerror="this.style.display='none'">`;
+                        });
+                        allergensHtml += '</div>';
+                    }
+
+                    let pricesHtml = '<div class="price-tag-group">';
+                    let buttonsHtml = '<div class="add-btn-group">';
+
+                    item.prices.forEach(p => {
+                        let priceLabelText = t[p.labelKey] || p.key;
+                        
+                        let btnText = t.btnOrder;
+                        if (p.labelKey === 'lblTapa') btnText = t.btnTapa;
+                        if (p.labelKey === 'lblRacion') btnText = t.btnRacion;
+                        if (p.labelKey === 'lblMontado') btnText = t.btnMontado;
+                        if (p.labelKey === 'lblBocata') btnText = t.btnBocata;
+
+                        pricesHtml += `<span class="price-option">${p.val} <span class="price-label">${priceLabelText}</span></span>`;
+                        
+                        const fullCartName = `${name} (${priceLabelText})`;
+                        buttonsHtml += `<button class="btn-add" onclick="addToCart('${fullCartName.replace(/'/g, "\\'")}')">${btnText}</button>`;
+                    });
+
+                    pricesHtml += '</div>';
+                    buttonsHtml += '</div>';
+
+                    html += `
+                        <div class="item-card">
+                            <div class="item-header">
+                                <div class="item-name">${name}</div>
+                                ${desc ? `<div class="item-desc">${desc}</div>` : ''}
+                                ${allergensHtml}
+                            </div>
+                            <div class="item-actions">
+                                ${pricesHtml}
+                                ${buttonsHtml}
+                            </div>
+                        </div>
+                    `;
+                });
+
+                html += `
+                        </div>
+                    </section>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        function addToCart(fullName) {
+            // 1. Añadir a la lista local del teléfono
+            const existing = cart.find(item => item.name === fullName);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({ name: fullName, quantity: 1 });
+            }
+            updateCartUI();
+
+            // 2. Registrar inmediatamente en el servidor al seleccionar
+            saveOrderToServerJSON([{ name: fullName, quantity: 1 }]);
+        }
+
+        function updateQuantity(name, delta) {
+            const item = cart.find(i => i.name === name);
+            if (item) {
+                item.quantity += delta;
+                if (item.quantity <= 0) {
+                    cart = cart.filter(i => i.name !== name);
+                }
+            }
+            updateCartUI();
+            renderModal();
+        }
+
+        function clearCart() {
+            cart = [];
+            updateCartUI();
+            renderModal();
+        }
+
+        function updateCartUI() {
+            const t = uiTranslations[currentLang];
+            const totalCount = cart.reduce((sum, i) => sum + i.quantity, 0);
+            
+            const countWord = totalCount === 1 ? t.cartSelected : t.cartSelectedPlural;
+            const selWord = totalCount === 1 ? t.cartSelectedWord : t.cartSelectedWordPlural;
+
+            document.getElementById('cart-count-text').innerText = `${totalCount} ${countWord} ${selWord}`;
+            document.getElementById('cart-table-badge').innerText = `${t.tablePrefix}${selectedTable}${t.zoneTerraza}`;
+            document.getElementById('ticket-table-display').innerText = `${t.tablePrefix}${selectedTable}${t.zoneTerraza}`;
+        }
+
+        function openModal() {
+            renderModal();
+            document.getElementById('modal-overlay').classList.add('active');
+            document.getElementById('modal-sheet').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('modal-overlay').classList.remove('active');
+            document.getElementById('modal-sheet').classList.remove('active');
+        }
+
+        function renderModal() {
+            const body = document.getElementById('modal-body');
+            const footer = document.getElementById('modal-footer');
+            const t = uiTranslations[currentLang];
+
+            if (cart.length === 0) {
+                body.innerHTML = `
+                    <div style="text-align:center; padding: 20px; color: var(--text-muted);">
+                        <span style="font-size: 2rem;">🍽️</span>
+                        <p style="font-weight:700; margin-top:8px;">${t.emptyCartMsg}</p>
+                        <p style="font-size:0.8rem; margin-top:4px;">${t.emptyCartSub}</p>
+                    </div>
+                `;
+                footer.style.display = 'none';
+                return;
+            }
+
+            footer.style.display = 'flex';
+
+            let html = '';
+            cart.forEach(item => {
+                html += `
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <div class="cart-item-title" style="font-weight:700;">${item.name}</div>
+                        </div>
+                        <div class="qty-controls">
+                            <button class="qty-btn" onclick="updateQuantity('${item.name.replace(/'/g, "\\'")}', -1)">-</button>
+                            <span class="qty-val" style="font-weight:700;">${item.quantity}</span>
+                            <button class="qty-btn" onclick="updateQuantity('${item.name.replace(/'/g, "\\'")}', 1)">+</button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            body.innerHTML = html;
+        }
+
+        function showWaiterTicket() {
+            if (cart.length === 0) return;
+
+            closeModal();
+            const ticketList = document.getElementById('ticket-list');
+            let html = '';
+
+            cart.forEach(item => {
+                html += `
+                    <li>
+                        <span>${item.quantity}x ${item.name}</span>
+                    </li>
+                `;
+            });
+
+            ticketList.innerHTML = html;
+            document.getElementById('waiter-overlay').classList.add('active');
+        }
+
+        function closeWaiterTicket() {
+            document.getElementById('waiter-overlay').classList.remove('active');
+        }
+
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navBtns = document.querySelectorAll('.cat-btn');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 130;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === `#${current}`) {
+                    btn.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+
+</body></html>
