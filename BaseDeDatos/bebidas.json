@@ -1,0 +1,168 @@
+{
+  "_comentario": "Exportación JSON del catálogo de Bar La Ponderosa. Fuente: Completo/Combinados.md y horarios_redes.md. Pensada para consumirse directamente con Fetch API (ver README_BBDD.md).",
+  "version": "1.0.0",
+  "actualizado": "2026-09-30",
+  "bar": {
+    "nombre": "Bar La Ponderosa",
+    "horario": {
+      "apertura": "11:30",
+      "cierre": "02:00",
+      "texto": "11:30 - 2:00",
+      "nota": "El cierre '02:00' corresponde a las 2:00 AM"
+    },
+    "instagram": "@bar_laponderosa",
+    "instagram_url": "https://www.instagram.com/bar_laponderosa/",
+    "facebook": "Bar La Ponderosa",
+    "facebook_url": "https://www.facebook.com/BarLaPonderosa",
+    "telefono": "693789032"
+  },
+  "categorias": [
+    {
+      "id": 1,
+      "nombre": "Vinos Tintos",
+      "icono": "\ud83c\udf77",
+      "orden": 1,
+      "productos": [
+        { "id": 1, "categoria_id": 1, "nombre": "Vino Tinto Viña Puebla Tempranillo", "precio": 1.80, "disponible": true, "es_vino": true, "foto_url": "Carta de Vinos/fotos/vinapuebla.jpg" },
+        { "id": 2, "categoria_id": 1, "nombre": "Vino Tinto Albai", "precio": 1.50, "disponible": true, "es_vino": true, "foto_url": "Carta de Vinos/fotos/albai.jpg" },
+        { "id": 3, "categoria_id": 1, "nombre": "Vino Tinto 10.12", "precio": 2.00, "disponible": true, "es_vino": true, "foto_url": "Carta de Vinos/fotos/1012tinto.png" },
+        { "id": 4, "categoria_id": 1, "nombre": "Vino Tinto Berberana", "precio": 1.20, "disponible": true, "es_vino": true, "foto_url": "Carta de Vinos/fotos/berberana.jpg" }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Vinos Blancos",
+      "icono": "\ud83e\udd42",
+      "orden": 2,
+      "productos": [
+        { "id": 5, "categoria_id": 2, "nombre": "Vino Blanco 10.12 Semidulce", "precio": 2.00, "disponible": true, "es_vino": true, "foto_url": "Carta de Vinos/fotos/1012blanco.png" },
+        { "id": 6, "categoria_id": 2, "nombre": "Vino Blanco Dulce Eva", "precio": 2.00, "disponible": true, "es_vino": true, "foto_url": "Carta de Vinos/fotos/dulceeva.jpg" },
+        { "id": 7, "categoria_id": 2, "nombre": "Vino Blanco Viña Pelina Semidulce", "precio": 2.00, "disponible": true, "es_vino": true, "foto_url": "Carta de Vinos/fotos/semidulcevinapelina.jpg" },
+        { "id": 8, "categoria_id": 2, "nombre": "Vino Blanco Viña Pelina Verdejo", "precio": 2.00, "disponible": true, "es_vino": true, "foto_url": "Carta de Vinos/fotos/verdejovinapelina.jpg" },
+        { "id": 9, "categoria_id": 2, "nombre": "Vino Blanco Amor del Bueno", "precio": 2.00, "disponible": true, "es_vino": true, "foto_url": "Carta de Vinos/fotos/amor_del_bueno.jpg" },
+        { "id": 10, "categoria_id": 2, "nombre": "Vino Blanco Pozanco Verdejo", "precio": 2.00, "disponible": true, "es_vino": true, "foto_url": "Carta de Vinos/fotos/pozanco_Verdejo.png" },
+        { "id": 11, "categoria_id": 2, "nombre": "Vino Blanco Barbadillo", "precio": 2.00, "disponible": true, "es_vino": true, "foto_url": "Carta de Vinos/fotos/barbadillo.jpg" }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Ginebras",
+      "icono": "\ud83c\udf78",
+      "orden": 3,
+      "productos": [
+        { "id": 12, "categoria_id": 3, "nombre": "Larios", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 13, "categoria_id": 3, "nombre": "Beefeater", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 14, "categoria_id": 3, "nombre": "Beefeater Pink", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 15, "categoria_id": 3, "nombre": "Beefeater Black", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 16, "categoria_id": 3, "nombre": "Gordon's", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 17, "categoria_id": 3, "nombre": "Tanqueray", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 18, "categoria_id": 3, "nombre": "Seagram's", "precio": 6.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 19, "categoria_id": 3, "nombre": "Seagram's 0.0", "precio": 5.50, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 20, "categoria_id": 3, "nombre": "Martin Miller's", "precio": 7.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 21, "categoria_id": 3, "nombre": "Puerto de Indias Melon", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 22, "categoria_id": 3, "nombre": "Puerto de Indias Strawberry", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 23, "categoria_id": 3, "nombre": "Puerto de Indias Classic", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 24, "categoria_id": 3, "nombre": "Puerto de Indias Black Berry", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Rones",
+      "icono": "\ud83c\udf79",
+      "orden": 4,
+      "productos": [
+        { "id": 25, "categoria_id": 4, "nombre": "Barceló", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 26, "categoria_id": 4, "nombre": "Brugal", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 27, "categoria_id": 4, "nombre": "Cacique", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 28, "categoria_id": 4, "nombre": "Cacique 500", "precio": 8.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 29, "categoria_id": 4, "nombre": "Santa Teresa", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 30, "categoria_id": 4, "nombre": "Legendario", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 31, "categoria_id": 4, "nombre": "Capitán Morgan", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 32, "categoria_id": 4, "nombre": "Bacardí", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 33, "categoria_id": 4, "nombre": "Zacapa", "precio": 12.00, "disponible": true, "es_vino": false, "foto_url": null }
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Vodkas",
+      "icono": "\ud83e\uddca",
+      "orden": 5,
+      "productos": [
+        { "id": 34, "categoria_id": 5, "nombre": "Absolut", "precio": 6.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 35, "categoria_id": 5, "nombre": "Smirnoff", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 36, "categoria_id": 5, "nombre": "Eristoff", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 37, "categoria_id": 5, "nombre": "Cîroc", "precio": 7.00, "disponible": true, "es_vino": false, "foto_url": null }
+      ]
+    },
+    {
+      "id": 6,
+      "nombre": "Whiskies",
+      "icono": "\ud83e\udd43",
+      "orden": 6,
+      "productos": [
+        { "id": 38, "categoria_id": 6, "nombre": "J&B", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 39, "categoria_id": 6, "nombre": "Ballantine's", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 40, "categoria_id": 6, "nombre": "Ballantine's 10", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 41, "categoria_id": 6, "nombre": "Johnnie Walker Red Label", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 42, "categoria_id": 6, "nombre": "Johnnie Walker Black Label", "precio": 7.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 43, "categoria_id": 6, "nombre": "White Label", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 44, "categoria_id": 6, "nombre": "Cutty Sark", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 45, "categoria_id": 6, "nombre": "100 Pipers", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 46, "categoria_id": 6, "nombre": "Jameson", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 47, "categoria_id": 6, "nombre": "Four Roses", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 48, "categoria_id": 6, "nombre": "Jack Daniel's", "precio": 7.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 49, "categoria_id": 6, "nombre": "Jim Beam", "precio": 5.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 50, "categoria_id": 6, "nombre": "Glenfiddich", "precio": 7.50, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 51, "categoria_id": 6, "nombre": "Macallan", "precio": 13.00, "disponible": true, "es_vino": false, "foto_url": null }
+      ]
+    },
+    {
+      "id": 7,
+      "nombre": "Refrescos, Zumos y Otras Bebidas",
+      "icono": "\ud83e\udd64",
+      "orden": 7,
+      "productos": [
+        { "id": 52, "categoria_id": 7, "nombre": "Coca-Cola Normal", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 53, "categoria_id": 7, "nombre": "Coca-Cola Zero (CCZ)", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 54, "categoria_id": 7, "nombre": "Coca-Cola Zero Zero (CCZZ)", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 55, "categoria_id": 7, "nombre": "Fanta Naranja", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 56, "categoria_id": 7, "nombre": "Fanta Limón", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 57, "categoria_id": 7, "nombre": "Seven Up", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 58, "categoria_id": 7, "nombre": "Sprite", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 59, "categoria_id": 7, "nombre": "Red Bull", "precio": 2.50, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 60, "categoria_id": 7, "nombre": "Aquarius de Limón", "precio": 2.50, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 61, "categoria_id": 7, "nombre": "Aquarius de Naranja", "precio": 2.50, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 62, "categoria_id": 7, "nombre": "Zumo de Piña", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 63, "categoria_id": 7, "nombre": "Zumo de Melocotón", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 64, "categoria_id": 7, "nombre": "Zumo de Tomate", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 65, "categoria_id": 7, "nombre": "Batido de Chocolate", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 66, "categoria_id": 7, "nombre": "Batido de Vainilla", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 67, "categoria_id": 7, "nombre": "Nestea Maracuyá", "precio": 2.50, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 68, "categoria_id": 7, "nombre": "Nestea de Limón", "precio": 2.50, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 69, "categoria_id": 7, "nombre": "Nestea de Frutos Rojos", "precio": 2.50, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 70, "categoria_id": 7, "nombre": "Tónica Schweppes", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 71, "categoria_id": 7, "nombre": "Schweppes de Limón", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 72, "categoria_id": 7, "nombre": "Tónica Royal Bliss", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 73, "categoria_id": 7, "nombre": "Royal Bliss Berry", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 74, "categoria_id": 7, "nombre": "Royal Bliss de Limón", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 75, "categoria_id": 7, "nombre": "Mosto", "precio": 1.50, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 76, "categoria_id": 7, "nombre": "Tinto de Verano", "precio": 2.00, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 77, "categoria_id": 7, "nombre": "Tinto de Verano La Casera", "precio": 2.50, "disponible": true, "es_vino": false, "foto_url": null },
+        { "id": 78, "categoria_id": 7, "nombre": "Tinto de Verano La Casera 0.0", "precio": 2.50, "disponible": true, "es_vino": false, "foto_url": null }
+      ]
+    }
+  ],
+  "totales": {
+    "categorias": 7,
+    "productos": 78,
+    "productos_por_categoria": {
+      "1": 4,
+      "2": 7,
+      "3": 13,
+      "4": 9,
+      "5": 4,
+      "6": 14,
+      "7": 27
+    }
+  }
+}
