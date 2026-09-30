@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar La Ponderosa | Carta Digital de Bebidas</title>
+    <meta name="description" content="Carta digital completa del Bar La Ponderosa: vinos tintos y blancos, ginebras, rones, vodkas, whiskies, refrescos y zumos. Abierto de 11:30 a 2:00.">
+    <meta name="theme-color" content="#2D0B12">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ================= BARRA SUPERIOR: HORARIO Y CONTACTO ================= -->
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <p class="topbar-schedule">
+                <span class="pulse-dot" aria-hidden="true"></span>
+                <span><strong>Horario:</strong> 11:30 h – 2:00 h</span>
+            </p>
+            <div class="topbar-links">
+                <a href="https://instagram.com/bar_laponderosa" target="_blank" rel="noopener" aria-label="Instagram de Bar La Ponderosa">
+                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <span>@bar_laponderosa</span>
+                </a>
+                <a href="tel:+34693789032" aria-label="Llamar al 693 789 032">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>693 789 032</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#inicio" class="brand" aria-label="Bar La Ponderosa - Inicio">
+                <img src="./logo_ponderosa.jpeg" alt="Logo Bar La Ponderosa" class="brand-logo">
+                <span class="brand-text">
+                    <span class="brand-name">BAR LA PONDEROSA</span>
+                    <span class="brand-tag">CARTA DIGITAL</span>
+                </span>
+            </a>
+
+            <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+                <a href="#inicio" class="nav-link active" data-nav-filter="">Inicio</a>
+                <a href="#carta" class="nav-link" data-nav-filter="tinto">Tintos</a>
+                <a href="#carta" class="nav-link" data-nav-filter="blanco">Blancos</a>
+                <a href="#carta" class="nav-link" data-nav-filter="ginebra">Ginebras</a>
+                <a href="#carta" class="nav-link" data-nav-filter="ron">Rones</a>
+                <a href="#carta" class="nav-link" data-nav-filter="vodka">Vodkas</a>
+                <a href="#carta" class="nav-link" data-nav-filter="whisky">Whiskies</a>
+                <a href="#carta" class="nav-link" data-nav-filter="refresco">Refrescos</a>
+                <a href="#contacto" class="nav-link" data-nav-filter="">Contacto</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ================= HERO / PORTADA ================= -->
+    <section class="hero" id="inicio">
+        <div class="hero-pattern" aria-hidden="true"></div>
+        <div class="container hero-content">
+            <span class="hero-badge">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 22h8M12 15v7M12 15a7 7 0 0 0 7-7V3H5v5a7 7 0 0 0 7 7z"/></svg>
+                Carta Digital · Bar La Ponderosa
+            </span>
+            <h1 class="hero-title">Un Buen Trago para <em>Cada Momento</em></h1>
+            <p class="hero-subtitle">
+                Vinos seleccionados, ginebras, rones, vodkas, whiskies y refrescos.
+                Toda nuestra carta en un solo lugar, servida en un ambiente cálido y acogedor.
+                Abierto de 11:30 a 2:00.
+            </p>
+            <div class="hero-actions">
+                <a href="#carta" class="btn btn-primary">
+                    <span>Ver la Carta</span>
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                </a>
+                <a href="#contacto" class="btn btn-ghost">Contacto</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">78</span>
+                    <span class="stat-label">Referencias</span>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat">
+                    <span class="stat-value">7</span>
+                    <span class="stat-label">Categorías</span>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat">
+                    <span class="stat-value">11:30 – 2:00</span>
+                    <span class="stat-label">Horario</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CARTA DIGITAL INTERACTIVA ================= -->
+    <main class="menu-section" id="carta">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-kicker">NUESTRA CARTA</span>
+                <h2 class="section-title">Carta de Bebidas</h2>
+                <div class="title-orn" aria-hidden="true">
+                    <span></span>
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                    <span></span>
+                </div>
+                <p class="section-desc">Elige una categoría o busca tu bebida favorita. Los precios corresponden por unidad servida en barra.</p>
+            </header>
+
+            <!-- FILTROS (PESTAÑAS) + BUSCADOR -->
+            <div class="controls" id="controls">
+                <div class="filter-tabs" role="tablist" aria-label="Categorías de bebidas">
+                    <button class="filter-btn active" data-filter="todos" aria-selected="true">
+                        <span>Todos</span>
+                        <span class="tab-count" data-count="todos">78</span>
+                    </button>
+                    <button class="filter-btn" data-filter="tinto" aria-selected="false">
+                        <span class="dot dot-tinto" aria-hidden="true"></span>
+                        <span>Vinos Tintos</span>
+                        <span class="tab-count" data-count="tinto"></span>
+                    </button>
+                    <button class="filter-btn" data-filter="blanco" aria-selected="false">
+                        <span class="dot dot-blanco" aria-hidden="true"></span>
+                        <span>Vinos Blancos</span>
+                        <span class="tab-count" data-count="blanco"></span>
+                    </button>
+                    <button class="filter-btn" data-filter="ginebra" aria-selected="false">
+                        <span>Ginebras</span>
+                        <span class="tab-count" data-count="ginebra"></span>
+                    </button>
+                    <button class="filter-btn" data-filter="ron" aria-selected="false">
+                        <span>Rones</span>
+                        <span class="tab-count" data-count="ron"></span>
+                    </button>
+                    <button class="filter-btn" data-filter="vodka" aria-selected="false">
+                        <span>Vodkas</span>
+                        <span class="tab-count" data-count="vodka"></span>
+                    </button>
+                    <button class="filter-btn" data-filter="whisky" aria-selected="false">
+                        <span>Whiskies</span>
+                        <span class="tab-count" data-count="whisky"></span>
+                    </button>
+                    <button class="filter-btn" data-filter="refresco" aria-selected="false">
+                        <span>Refrescos y Más</span>
+                        <span class="tab-count" data-count="refresco"></span>
+                    </button>
+                </div>
+
+                <label class="search-box" for="drinkSearch">
+                    <svg class="search-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    <input type="search" id="drinkSearch" placeholder="Buscar bebida por nombre…" autocomplete="off">
+                </label>
+            </div>
+
+            <p class="results-info" id="resultsInfo" aria-live="polite"></p>
+
+            <!-- GRID DE BEBIDAS -->
+            <div class="drinks-grid" id="drinksGrid">
+
+                <!-- ============ VINOS TINTOS ============ -->
+                <article class="drink-card" data-category="tinto">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍷</span>
+                        <span class="cat-tag tag-tinto">Vino Tinto</span>
+                    </div>
+                    <h3 class="drink-name">Viña Puebla Tempranillo</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">1,80 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="tinto">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍷</span>
+                        <span class="cat-tag tag-tinto">Vino Tinto</span>
+                    </div>
+                    <h3 class="drink-name">Albai</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">1,50 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="tinto">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍷</span>
+                        <span class="cat-tag tag-tinto">Vino Tinto</span>
+                    </div>
+                    <h3 class="drink-name">10.12</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="tinto">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍷</span>
+                        <span class="cat-tag tag-tinto">Vino Tinto</span>
+                    </div>
+                    <h3 class="drink-name">Berberana</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">1,20 €</span>
+                    </div>
+                </article>
+
+                <!-- ============ VINOS BLANCOS ============ -->
+                <article class="drink-card" data-category="blanco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥂</span>
+                        <span class="cat-tag tag-blanco">Vino Blanco</span>
+                    </div>
+                    <h3 class="drink-name">10.12 Semidulce</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="blanco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥂</span>
+                        <span class="cat-tag tag-blanco">Vino Blanco</span>
+                    </div>
+                    <h3 class="drink-name">Dulce Eva</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="blanco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥂</span>
+                        <span class="cat-tag tag-blanco">Vino Blanco</span>
+                    </div>
+                    <h3 class="drink-name">Viña Pelina Semidulce</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="blanco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥂</span>
+                        <span class="cat-tag tag-blanco">Vino Blanco</span>
+                    </div>
+                    <h3 class="drink-name">Viña Pelina Verdejo</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="blanco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥂</span>
+                        <span class="cat-tag tag-blanco">Vino Blanco</span>
+                    </div>
+                    <h3 class="drink-name">Amor del Bueno</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="blanco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥂</span>
+                        <span class="cat-tag tag-blanco">Vino Blanco</span>
+                    </div>
+                    <h3 class="drink-name">Pozanco Verdejo</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="blanco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥂</span>
+                        <span class="cat-tag tag-blanco">Vino Blanco</span>
+                    </div>
+                    <h3 class="drink-name">Barbadillo</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <!-- ============ GINEBRAS ============ -->
+                <article class="drink-card" data-category="ginebra">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍸</span>
+                        <span class="cat-tag tag-ginebra">Ginebra</span>
+                    </div>
+                    <h3 class="drink-name">Larios</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ginebra">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍸</span>
+                        <span class="cat-tag tag-ginebra">Ginebra</span>
+                    </div>
+                    <h3 class="drink-name">Beefeater</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ginebra">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍸</span>
+                        <span class="cat-tag tag-ginebra">Ginebra</span>
+                    </div>
+                    <h3 class="drink-name">Beefeater Pink</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ginebra">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍸</span>
+                        <span class="cat-tag tag-ginebra">Ginebra</span>
+                    </div>
+                    <h3 class="drink-name">Beefeater Black</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ginebra">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍸</span>
+                        <span class="cat-tag tag-ginebra">Ginebra</span>
+                    </div>
+                    <h3 class="drink-name">Gordon's</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ginebra">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍸</span>
+                        <span class="cat-tag tag-ginebra">Ginebra</span>
+                    </div>
+                    <h3 class="drink-name">Tanqueray</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ginebra">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍸</span>
+                        <span class="cat-tag tag-ginebra">Ginebra</span>
+                    </div>
+                    <h3 class="drink-name">Seagram's</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">6,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ginebra">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍸</span>
+                        <span class="cat-tag tag-ginebra">Ginebra 0.0</span>
+                    </div>
+                    <h3 class="drink-name">Seagram's 0.0</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,50 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ginebra">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍸</span>
+                        <span class="cat-tag tag-ginebra">Ginebra</span>
+                    </div>
+                    <h3 class="drink-name">Martin Miller's</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">7,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ginebra">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍸</span>
+                        <span class="cat-tag tag-ginebra">Ginebra</span>
+                    </div>
+                    <h3 class="drink-name">Puerto de Indias Melon</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ginebra">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍸</span>
+                        <span class="cat-tag tag-ginebra">Ginebra</span>
+                    </div>
+                    <h3 class="drink-name">Puerto de Indias Strawberry</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ginebra">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍸</span>
+                        <span class="cat-tag tag-ginebra">Ginebra</span>
+                    </div>
+                    <h3 class="drink-name">Puerto de Indias Classic</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ginebra">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍸</span>
+                        <span class="cat-tag tag-ginebra">Ginebra</span>
+                    </div>
+                    <h3 class="drink-name">Puerto de Indias Black Berry</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <!-- ============ RONES ============ -->
+                <article class="drink-card" data-category="ron">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍹</span>
+                        <span class="cat-tag tag-ron">Ron</span>
+                    </div>
+                    <h3 class="drink-name">Barceló</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ron">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍹</span>
+                        <span class="cat-tag tag-ron">Ron</span>
+                    </div>
+                    <h3 class="drink-name">Brugal</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ron">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍹</span>
+                        <span class="cat-tag tag-ron">Ron</span>
+                    </div>
+                    <h3 class="drink-name">Cacique</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ron">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍹</span>
+                        <span class="cat-tag tag-ron">Ron</span>
+                    </div>
+                    <h3 class="drink-name">Cacique 500</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">8,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ron">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍹</span>
+                        <span class="cat-tag tag-ron">Ron</span>
+                    </div>
+                    <h3 class="drink-name">Santa Teresa</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ron">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍹</span>
+                        <span class="cat-tag tag-ron">Ron</span>
+                    </div>
+                    <h3 class="drink-name">Legendario</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ron">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍹</span>
+                        <span class="cat-tag tag-ron">Ron</span>
+                    </div>
+                    <h3 class="drink-name">Capitán Morgan</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ron">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍹</span>
+                        <span class="cat-tag tag-ron">Ron</span>
+                    </div>
+                    <h3 class="drink-name">Bacardí</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="ron">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍹</span>
+                        <span class="cat-tag tag-ron">Ron Premium</span>
+                    </div>
+                    <h3 class="drink-name">Zacapa</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">12,00 €</span>
+                    </div>
+                </article>
+
+                <!-- ============ VODKAS ============ -->
+                <article class="drink-card" data-category="vodka">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🧊</span>
+                        <span class="cat-tag tag-vodka">Vodka</span>
+                    </div>
+                    <h3 class="drink-name">Absolut</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">6,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="vodka">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🧊</span>
+                        <span class="cat-tag tag-vodka">Vodka</span>
+                    </div>
+                    <h3 class="drink-name">Smirnoff</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="vodka">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🧊</span>
+                        <span class="cat-tag tag-vodka">Vodka</span>
+                    </div>
+                    <h3 class="drink-name">Eristoff</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="vodka">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🧊</span>
+                        <span class="cat-tag tag-vodka">Vodka Premium</span>
+                    </div>
+                    <h3 class="drink-name">Cîroc</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">7,00 €</span>
+                    </div>
+                </article>
+
+                <!-- ============ WHISKIES ============ -->
+                <article class="drink-card" data-category="whisky">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥃</span>
+                        <span class="cat-tag tag-whisky">Whisky</span>
+                    </div>
+                    <h3 class="drink-name">J&amp;B</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="whisky">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥃</span>
+                        <span class="cat-tag tag-whisky">Whisky</span>
+                    </div>
+                    <h3 class="drink-name">Ballantine's</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="whisky">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥃</span>
+                        <span class="cat-tag tag-whisky">Whisky</span>
+                    </div>
+                    <h3 class="drink-name">Ballantine's 10</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="whisky">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥃</span>
+                        <span class="cat-tag tag-whisky">Whisky</span>
+                    </div>
+                    <h3 class="drink-name">Johnnie Walker Red Label</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="whisky">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥃</span>
+                        <span class="cat-tag tag-whisky">Whisky Premium</span>
+                    </div>
+                    <h3 class="drink-name">Johnnie Walker Black Label</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">7,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="whisky">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥃</span>
+                        <span class="cat-tag tag-whisky">Whisky</span>
+                    </div>
+                    <h3 class="drink-name">White Label</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="whisky">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥃</span>
+                        <span class="cat-tag tag-whisky">Whisky</span>
+                    </div>
+                    <h3 class="drink-name">Cutty Sark</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="whisky">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥃</span>
+                        <span class="cat-tag tag-whisky">Whisky</span>
+                    </div>
+                    <h3 class="drink-name">100 Pipers</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="whisky">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥃</span>
+                        <span class="cat-tag tag-whisky">Whisky</span>
+                    </div>
+                    <h3 class="drink-name">Jameson</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="whisky">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥃</span>
+                        <span class="cat-tag tag-whisky">Whisky</span>
+                    </div>
+                    <h3 class="drink-name">Four Roses</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="whisky">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥃</span>
+                        <span class="cat-tag tag-whisky">Whisky</span>
+                    </div>
+                    <h3 class="drink-name">Jack Daniel's</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">7,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="whisky">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥃</span>
+                        <span class="cat-tag tag-whisky">Whisky</span>
+                    </div>
+                    <h3 class="drink-name">Jim Beam</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">5,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="whisky">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥃</span>
+                        <span class="cat-tag tag-whisky">Whisky Premium</span>
+                    </div>
+                    <h3 class="drink-name">Glenfiddich</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">7,50 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="whisky">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥃</span>
+                        <span class="cat-tag tag-whisky">Whisky Premium</span>
+                    </div>
+                    <h3 class="drink-name">Macallan</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">13,00 €</span>
+                    </div>
+                </article>
+
+                <!-- ============ REFRESCOS, ZUMOS Y OTRAS BEBIDAS ============ -->
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥤</span>
+                        <span class="cat-tag tag-refresco">Refresco</span>
+                    </div>
+                    <h3 class="drink-name">Coca-Cola Normal</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥤</span>
+                        <span class="cat-tag tag-refresco">Refresco</span>
+                    </div>
+                    <h3 class="drink-name">Coca-Cola Zero (CCZ)</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥤</span>
+                        <span class="cat-tag tag-refresco">Refresco</span>
+                    </div>
+                    <h3 class="drink-name">Coca-Cola Zero Zero (CCZZ)</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥤</span>
+                        <span class="cat-tag tag-refresco">Refresco</span>
+                    </div>
+                    <h3 class="drink-name">Fanta Naranja</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥤</span>
+                        <span class="cat-tag tag-refresco">Refresco</span>
+                    </div>
+                    <h3 class="drink-name">Fanta Limón</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥤</span>
+                        <span class="cat-tag tag-refresco">Refresco</span>
+                    </div>
+                    <h3 class="drink-name">Seven Up</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥤</span>
+                        <span class="cat-tag tag-refresco">Refresco</span>
+                    </div>
+                    <h3 class="drink-name">Sprite</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">⚡</span>
+                        <span class="cat-tag tag-refresco">Energética</span>
+                    </div>
+                    <h3 class="drink-name">Red Bull</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,50 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥤</span>
+                        <span class="cat-tag tag-refresco">Isotónica</span>
+                    </div>
+                    <h3 class="drink-name">Aquarius de Limón</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,50 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥤</span>
+                        <span class="cat-tag tag-refresco">Isotónica</span>
+                    </div>
+                    <h3 class="drink-name">Aquarius de Naranja</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,50 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🧃</span>
+                        <span class="cat-tag tag-refresco">Zumo</span>
+                    </div>
+                    <h3 class="drink-name">Zumo de Piña</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🧃</span>
+                        <span class="cat-tag tag-refresco">Zumo</span>
+                    </div>
+                    <h3 class="drink-name">Zumo de Melocotón</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🧃</span>
+                        <span class="cat-tag tag-refresco">Zumo</span>
+                    </div>
+                    <h3 class="drink-name">Zumo de Tomate</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥛</span>
+                        <span class="cat-tag tag-refresco">Batido</span>
+                    </div>
+                    <h3 class="drink-name">Batido de Chocolate</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🥛</span>
+                        <span class="cat-tag tag-refresco">Batido</span>
+                    </div>
+                    <h3 class="drink-name">Batido de Vainilla</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🧋</span>
+                        <span class="cat-tag tag-refresco">Té Frío</span>
+                    </div>
+                    <h3 class="drink-name">Nestea Maracuyá</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,50 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🧋</span>
+                        <span class="cat-tag tag-refresco">Té Frío</span>
+                    </div>
+                    <h3 class="drink-name">Nestea de Limón</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,50 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🧋</span>
+                        <span class="cat-tag tag-refresco">Té Frío</span>
+                    </div>
+                    <h3 class="drink-name">Nestea de Frutos Rojos</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,50 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🫧</span>
+                        <span class="cat-tag tag-refresco">Tónica</span>
+                    </div>
+                    <h3 class="drink-name">Tónica Schweppes</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🫧</span>
+                        <span class="cat-tag tag-refresco">Tónica</span>
+                    </div>
+                    <h3 class="drink-name">Schweppes de Limón</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🫧</span>
+                        <span class="cat-tag tag-refresco">Tónica</span>
+                    </div>
+                    <h3 class="drink-name">Tónica Royal Bliss</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🫧</span>
+                        <span class="cat-tag tag-refresco">Tónica</span>
+                    </div>
+                    <h3 class="drink-name">Royal Bliss Berry</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🫧</span>
+                        <span class="cat-tag tag-refresco">Tónica</span>
+                    </div>
+                    <h3 class="drink-name">Royal Bliss de Limón</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍇</span>
+                        <span class="cat-tag tag-refresco">Mosto</span>
+                    </div>
+                    <h3 class="drink-name">Mosto</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">1,50 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍹</span>
+                        <span class="cat-tag tag-refresco">Cóctel</span>
+                    </div>
+                    <h3 class="drink-name">Tinto de Verano</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,00 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍹</span>
+                        <span class="cat-tag tag-refresco">Cóctel</span>
+                    </div>
+                    <h3 class="drink-name">Tinto de Verano La Casera</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,50 €</span>
+                    </div>
+                </article>
+
+                <article class="drink-card" data-category="refresco">
+                    <div class="card-head">
+                        <span class="cat-icon" aria-hidden="true">🍹</span>
+                        <span class="cat-tag tag-refresco">Cóctel 0.0</span>
+                    </div>
+                    <h3 class="drink-name">Tinto de Verano La Casera 0.0</h3>
+                    <div class="card-foot">
+                        <span class="price-label">Precio</span>
+                        <span class="drink-price">2,50 €</span>
+                    </div>
+                </article>
+
+            </div><!-- /.drinks-grid -->
+
+            <!-- ESTADO VACÍO (SIN RESULTADOS) -->
+            <div class="no-results" id="noResults" hidden>
+                <svg width="52" height="52" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                <h3>No hemos encontrado esa bebida</h3>
+                <p>Prueba con otro nombre o cambia la categoría seleccionada.</p>
+                <button class="btn btn-ghost" id="resetFilters" type="button">Ver todas las bebidas</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- ================= FOOTER: CONTACTO, HORARIOS Y REDES ================= -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Marca y redes sociales -->
+                <div class="footer-col footer-brand">
+                    <img src="./logo_ponderosa.jpeg" alt="Logo Bar La Ponderosa" class="footer-logo">
+                    <h2 class="footer-brand-name">Bar La Ponderosa</h2>
+                    <p class="footer-tagline">Tu bar de confianza: buen vino, destilados de calidad y un ambiente siempre acogedor. Ven a por tu copa.</p>
+                    <div class="social-row">
+                        <a href="https://instagram.com/bar_laponderosa" target="_blank" rel="noopener" class="social-chip" aria-label="Instagram - @bar_laponderosa">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            <span>@bar_laponderosa</span>
+                        </a>
+                        <a href="https://facebook.com/BarLaPonderosa" target="_blank" rel="noopener" class="social-chip" aria-label="Facebook - Bar La Ponderosa">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            <span>Bar La Ponderosa</span>
+                        </a>
+                        <a href="tel:+34693789032" class="social-chip" aria-label="Llamar al 693 789 032">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>693 789 032</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Horario -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Horario de Apertura</h3>
+                    <div class="schedule-card">
+                        <div class="schedule-row">
+                            <span class="schedule-day">Lunes a Domingo</span>
+                            <span class="schedule-hours">11:30 – 2:00</span>
+                        </div>
+                        <p class="schedule-note">Abierto de forma ininterrumpida todos los días.</p>
+                    </div>
+                </div>
+
+                <!-- Accesos a la carta -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Categorías de la Carta</h3>
+                    <ul class="footer-menu">
+                        <li><a href="#carta" data-nav-filter="todos">Todas las bebidas</a></li>
+                        <li><a href="#carta" data-nav-filter="tinto">Vinos Tintos</a></li>
+                        <li><a href="#carta" data-nav-filter="blanco">Vinos Blancos</a></li>
+                        <li><a href="#carta" data-nav-filter="ginebra">Ginebras</a></li>
+                        <li><a href="#carta" data-nav-filter="ron">Rones</a></li>
+                        <li><a href="#carta" data-nav-filter="vodka">Vodkas</a></li>
+                        <li><a href="#carta" data-nav-filter="whisky">Whiskies</a></li>
+                        <li><a href="#carta" data-nav-filter="refresco">Refrescos, Zumos y Más</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Bar La Ponderosa · Carta Digital de Bebidas · Bebe con moderación</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
