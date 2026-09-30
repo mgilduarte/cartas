@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar La Ponderosa | Carta de Vinos - Temporada de Invierno</title>
+    
+    <!-- Meta tags SEO y PWA -->
+    <meta name="description" content="Carta digital y experiencia exclusiva de vinos para la temporada de invierno en Bar La Ponderosa. Vinos tintos y blancos seleccionados en un ambiente cálido y acogedor.">
+    <meta name="theme-color" content="#2D0B12">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR DE HORARIO -->
+    <div class="top-announcement">
+        <div class="container announcement-content">
+            <span class="pulse-dot"></span>
+            <span class="announcement-text"><strong>Horario de Invierno:</strong> Abierto de 11:30 h a 2:00 h</span>
+            <div class="social-top-links">
+                <a href="https://instagram.com/bar_laponderosa" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <span>@bar_laponderosa</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR / CABECERA -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo-link">
+                <img src="./logo_ponderosa.jpeg" alt="Logo Bar La Ponderosa" class="brand-logo">
+                <div class="brand-text">
+                    <span class="brand-name">BAR LA PONDEROSA</span>
+                    <span class="brand-tagline">CARTA DE VINOS • INVIERNO</span>
+                </div>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-link active">Inicio</a>
+                <a href="#carta" class="nav-link" onclick="filterWines('todos')">Carta Completa</a>
+                <a href="#carta" class="nav-link" onclick="filterWines('tinto')">Vinos Tintos</a>
+                <a href="#carta" class="nav-link" onclick="filterWines('blanco')">Vinos Blancos</a>
+                <a href="#experiencia" class="nav-link">Experiencia</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 22h8M12 15v7M12 15a7 7 0 0 0 7-7V3H5v5a7 7 0 0 0 7 7z"/></svg>
+                <span>Especial Temporada de Invierno</span>
+            </div>
+            <h1 class="hero-title">El Refugio Cálido del Buen Vino</h1>
+            <p class="hero-subtitle">
+                Este invierno, te invitamos a relajarte y disfrutar de nuestra cuidada selección de vinos tintos y blancos. Un espacio acogedor pensado para brindar, pausar y disfrutar en buena compañía.
+            </p>
+            <div class="hero-actions">
+                <a href="#carta" class="btn btn-primary">
+                    <span>Ver Carta de Vinos</span>
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                </a>
+                <a href="#experiencia" class="btn btn-secondary">Nuestra Experiencia</a>
+            </div>
+            
+            <div class="hero-highlights">
+                <div class="highlight-item">
+                    <span class="highlight-number">11</span>
+                    <span class="highlight-label">Vinos Seleccionados</span>
+                </div>
+                <div class="highlight-divider"></div>
+                <div class="highlight-item">
+                    <span class="highlight-number">100%</span>
+                    <span class="highlight-label">Ambiente Acogedor</span>
+                </div>
+                <div class="highlight-divider"></div>
+                <div class="highlight-item">
+                    <span class="highlight-number">11:30 - 2:00</span>
+                    <span class="highlight-label">Horario Continuo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARTA DE VINOS (SECCIÓN PRINCIPAL) -->
+    <section class="wine-menu-section" id="carta">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">NUESTRA BODEGA DE INVIERNO</span>
+                <h2 class="section-title">Carta Exclusiva de Vinos</h2>
+                <div class="title-decorator">
+                    <span></span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                    <span></span>
+                </div>
+                <p class="section-description">
+                    Explora nuestra variada selección por copas. Selecciona una categoría o busca tu vino favorito.
+                </p>
+            </div>
+
+            <!-- FILTROS Y BÚSQUEDA -->
+            <div class="controls-wrapper">
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="todos" onclick="filterWines('todos')">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+                        <span>Todos los Vinos</span>
+                        <span class="badge-count" id="count-todos">11</span>
+                    </button>
+                    <button class="filter-btn" data-filter="tinto" onclick="filterWines('tinto')">
+                        <span class="dot-indicator dot-tinto"></span>
+                        <span>Vinos Tintos</span>
+                        <span class="badge-count" id="count-tinto">4</span>
+                    </button>
+                    <button class="filter-btn" data-filter="blanco" onclick="filterWines('blanco')">
+                        <span class="dot-indicator dot-blanco"></span>
+                        <span>Vinos Blancos</span>
+                        <span class="badge-count" id="count-blanco">7</span>
+                    </button>
+                </div>
+
+                <div class="search-box">
+                    <svg class="search-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    <input type="text" id="wineSearch" placeholder="Buscar vino por nombre..." oninput="searchWines()">
+                </div>
+            </div>
+
+            <!-- RECTÁNGULO / CONTENEDOR DE TARJETAS DE VINO -->
+            <div class="wines-grid" id="winesGrid">
+                <!-- VINO 1: Viña Puebla Tempranillo -->
+                <div class="wine-card" data-category="tinto" data-name="vina puebla tempranillo tinto">
+                    <div class="wine-card-badge badge-tinto">Vino Tinto</div>
+                    <div class="wine-image-container" onclick="openModal('Viña Puebla Tempranillo', 'Vino Tinto', '1.80 €', './fotos/vinapuebla.jpg', 'D.O. Ribera del Guadiana. De perfil frutal, taninos redondos y suaves notas silvestres. Un tinto con cuerpo y personalidad para combatir el frío invernal.')">
+                        <img src="./fotos/vinapuebla.jpg" alt="Vino Tinto Viña Puebla Tempranillo" loading="lazy" class="wine-image">
+                        <div class="image-overlay">
+                            <span class="view-btn">Ampliar detalles</span>
+                        </div>
+                    </div>
+                    <div class="wine-info">
+                        <h3 class="wine-title">Viña Puebla Tempranillo</h3>
+                        <p class="wine-notes">D.O. Ribera del Guadiana • Notas de frutos rojos, agradable paso en boca y gran equilibrio.</p>
+                        <div class="wine-footer">
+                            <div class="wine-price-container">
+                                <span class="price-label">Precio</span>
+                                <span class="wine-price">1.80 €</span>
+                            </div>
+                            <button class="btn-detail" onclick="openModal('Viña Puebla Tempranillo', 'Vino Tinto', '1.80 €', './fotos/vinapuebla.jpg', 'D.O. Ribera del Guadiana. De perfil frutal, taninos redondos y suaves notas silvestres. Un tinto con cuerpo y personalidad para combatir el frío invernal.')">
+                                Ver ficha
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VINO 2: Albai -->
+                <div class="wine-card" data-category="tinto" data-name="albai tinto rioja">
+                    <div class="wine-card-badge badge-tinto">Vino Tinto</div>
+                    <div class="wine-image-container" onclick="openModal('Albai', 'Vino Tinto', '1.50 €', './fotos/albai.jpg', 'D.O.Ca. Rioja. Vino expresivo y fresco con toques de moras y regaliz. Excelente estructura y final limpio en boca.')">
+                        <img src="./fotos/albai.jpg" alt="Vino Tinto Albai" loading="lazy" class="wine-image">
+                        <div class="image-overlay">
+                            <span class="view-btn">Ampliar detalles</span>
+                        </div>
+                    </div>
+                    <div class="wine-info">
+                        <h3 class="wine-title">Albai</h3>
+                        <p class="wine-notes">D.O.Ca. Rioja • Carácter fresco, aromas a moras y especias suaves.</p>
+                        <div class="wine-footer">
+                            <div class="wine-price-container">
+                                <span class="price-label">Precio</span>
+                                <span class="wine-price">1.50 €</span>
+                            </div>
+                            <button class="btn-detail" onclick="openModal('Albai', 'Vino Tinto', '1.50 €', './fotos/albai.jpg', 'D.O.Ca. Rioja. Vino expresivo y fresco con toques de moras y regaliz. Excelente estructura y final limpio en boca.')">
+                                Ver ficha
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VINO 3: 10.12 Tinto -->
+                <div class="wine-card" data-category="tinto" data-name="10.12 tinto">
+                    <div class="wine-card-badge badge-tinto">Vino Tinto</div>
+                    <div class="wine-image-container" onclick="openModal('10.12 Tinto', 'Vino Tinto', '2.00 €', './fotos/1012tinto.png', 'Tinto de gran intensidad de color y aroma. Destaca por su frutalidad viva, cuerpo envolvente y balance idóneo.')">
+                        <img src="./fotos/1012tinto.png" alt="Vino Tinto 10.12" loading="lazy" class="wine-image">
+                        <div class="image-overlay">
+                            <span class="view-btn">Ampliar detalles</span>
+                        </div>
+                    </div>
+                    <div class="wine-info">
+                        <h3 class="wine-title">10.12 Tinto</h3>
+                        <p class="wine-notes">Tinto Joven Selección • Aroma varietal intenso, estructurado y sabroso en boca.</p>
+                        <div class="wine-footer">
+                            <div class="wine-price-container">
+                                <span class="price-label">Precio</span>
+                                <span class="wine-price">2.00 €</span>
+                            </div>
+                            <button class="btn-detail" onclick="openModal('10.12 Tinto', 'Vino Tinto', '2.00 €', './fotos/1012tinto.png', 'Tinto de gran intensidad de color y aroma. Destaca por su frutalidad viva, cuerpo envolvente y balance idóneo.')">
+                                Ver ficha
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VINO 4: Berberana -->
+                <div class="wine-card" data-category="tinto" data-name="berberana tinto">
+                    <div class="wine-card-badge badge-tinto">Vino Tinto</div>
+                    <div class="wine-image-container" onclick="openModal('Berberana', 'Vino Tinto', '1.20 €', './fotos/berberana.jpg', 'Un tinto tradicional de trago fácil y agradable. Perfecto para compartir en cualquier momento de la tarde o la noche.')">
+                        <img src="./fotos/berberana.jpg" alt="Vino Tinto Berberana" loading="lazy" class="wine-image">
+                        <div class="image-overlay">
+                            <span class="view-btn">Ampliar detalles</span>
+                        </div>
+                    </div>
+                    <div class="wine-info">
+                        <h3 class="wine-title">Berberana</h3>
+                        <p class="wine-notes">Tinto Clásico • Ligero, redondo y muy versátil para cualquier momento.</p>
+                        <div class="wine-footer">
+                            <div class="wine-price-container">
+                                <span class="price-label">Precio</span>
+                                <span class="wine-price">1.20 €</span>
+                            </div>
+                            <button class="btn-detail" onclick="openModal('Berberana', 'Vino Tinto', '1.20 €', './fotos/berberana.jpg', 'Un tinto tradicional de trago fácil y agradable. Perfecto para compartir en cualquier momento de la tarde o la noche.')">
+                                Ver ficha
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VINO 5: 10.12 Semidulce -->
+                <div class="wine-card" data-category="blanco" data-name="10.12 semidulce blanco">
+                    <div class="wine-card-badge badge-blanco">Vino Blanco</div>
+                    <div class="wine-image-container" onclick="openModal('10.12 Semidulce', 'Vino Blanco Semidulce', '2.00 €', './fotos/1012blanco.png', 'Blanco semidulce delicado con suave toque de dulzor natural. Notas de fruta blanca madura y acidez fresca.')">
+                        <img src="./fotos/1012blanco.png" alt="Vino Blanco 10.12 Semidulce" loading="lazy" class="wine-image">
+                        <div class="image-overlay">
+                            <span class="view-btn">Ampliar detalles</span>
+                        </div>
+                    </div>
+                    <div class="wine-info">
+                        <h3 class="wine-title">10.12 Semidulce</h3>
+                        <p class="wine-notes">Blanco Semidulce • Suave, fresco y muy aromático con finas notas frutales.</p>
+                        <div class="wine-footer">
+                            <div class="wine-price-container">
+                                <span class="price-label">Precio</span>
+                                <span class="wine-price">2.00 €</span>
+                            </div>
+                            <button class="btn-detail" onclick="openModal('10.12 Semidulce', 'Vino Blanco Semidulce', '2.00 €', './fotos/1012blanco.png', 'Blanco semidulce delicado con suave toque de dulzor natural. Notas de fruta blanca madura y acidez fresca.')">
+                                Ver ficha
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VINO 6: Dulce Eva -->
+                <div class="wine-card" data-category="blanco" data-name="dulce eva blanco moscatel">
+                    <div class="wine-card-badge badge-blanco">Vino Blanco</div>
+                    <div class="wine-image-container" onclick="openModal('Dulce Eva', 'Vino Blanco', '2.00 €', './fotos/dulceeva.jpg', 'D.O. Ribera del Guadiana. Elaborado a partir de uvas seleccionadas, ofrece matices a flor blanca y fruta fresca de verano.')">
+                        <img src="./fotos/dulceeva.jpg" alt="Vino Blanco Dulce Eva" loading="lazy" class="wine-image">
+                        <div class="image-overlay">
+                            <span class="view-btn">Ampliar detalles</span>
+                        </div>
+                    </div>
+                    <div class="wine-info">
+                        <h3 class="wine-title">Dulce Eva</h3>
+                        <p class="wine-notes">D.O. Ribera del Guadiana • Fragante aroma a flores blancas y perfil dulce muy sedoso.</p>
+                        <div class="wine-footer">
+                            <div class="wine-price-container">
+                                <span class="price-label">Precio</span>
+                                <span class="wine-price">2.00 €</span>
+                            </div>
+                            <button class="btn-detail" onclick="openModal('Dulce Eva', 'Vino Blanco', '2.00 €', './fotos/dulceeva.jpg', 'D.O. Ribera del Guadiana. Elaborado a partir de uvas seleccionadas, ofrece matices a flor blanca y fruta fresca de verano.')">
+                                Ver ficha
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VINO 7: Viña Pelina Semidulce -->
+                <div class="wine-card" data-category="blanco" data-name="vina pelina semidulce blanco">
+                    <div class="wine-card-badge badge-blanco">Vino Blanco</div>
+                    <div class="wine-image-container" onclick="openModal('Viña Pelina Semidulce', 'Vino Blanco Semidulce', '2.00 €', './fotos/semidulcevinapelina.jpg', 'Blanco semidulce sumamente equilibrado, goloso en paladar y con agradable recuerdo frutal tras cada sorbo.')">
+                        <img src="./fotos/semidulcevinapelina.jpg" alt="Vino Blanco Viña Pelina Semidulce" loading="lazy" class="wine-image">
+                        <div class="image-overlay">
+                            <span class="view-btn">Ampliar detalles</span>
+                        </div>
+                    </div>
+                    <div class="wine-info">
+                        <h3 class="wine-title">Viña Pelina Semidulce</h3>
+                        <p class="wine-notes">Semidulce Frutal • Equilibrado, fresco y con suave aroma citrico y goloso.</p>
+                        <div class="wine-footer">
+                            <div class="wine-price-container">
+                                <span class="price-label">Precio</span>
+                                <span class="wine-price">2.00 €</span>
+                            </div>
+                            <button class="btn-detail" onclick="openModal('Viña Pelina Semidulce', 'Vino Blanco Semidulce', '2.00 €', './fotos/semidulcevinapelina.jpg', 'Blanco semidulce sumamente equilibrado, goloso en paladar y con agradable recuerdo frutal tras cada sorbo.')">
+                                Ver ficha
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VINO 8: Viña Pelina Verdejo -->
+                <div class="wine-card" data-category="blanco" data-name="vina pelina verdejo blanco">
+                    <div class="wine-card-badge badge-blanco">Vino Blanco</div>
+                    <div class="wine-image-container" onclick="openModal('Viña Pelina Verdejo', 'Vino Blanco Verdejo', '2.00 €', './fotos/verdejovinapelina.jpg', 'Verdejo varietal característico por sus notas herbáceas, hinojo y fruta tropical. Muy refinado y fresco.')">
+                        <img src="./fotos/verdejovinapelina.jpg" alt="Vino Blanco Viña Pelina Verdejo" loading="lazy" class="wine-image">
+                        <div class="image-overlay">
+                            <span class="view-btn">Ampliar detalles</span>
+                        </div>
+                    </div>
+                    <div class="wine-info">
+                        <h3 class="wine-title">Viña Pelina Verdejo</h3>
+                        <p class="wine-notes">Varietal Verdejo • Toques de hinojo, melocotón y una acidez viva muy elegante.</p>
+                        <div class="wine-footer">
+                            <div class="wine-price-container">
+                                <span class="price-label">Precio</span>
+                                <span class="wine-price">2.00 €</span>
+                            </div>
+                            <button class="btn-detail" onclick="openModal('Viña Pelina Verdejo', 'Vino Blanco Verdejo', '2.00 €', './fotos/verdejovinapelina.jpg', 'Verdejo varietal característico por sus notas herbáceas, hinojo y fruta tropical. Muy refinado y fresco.')">
+                                Ver ficha
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VINO 9: Amor del Bueno -->
+                <div class="wine-card" data-category="blanco" data-name="amor del bueno blanco">
+                    <div class="wine-card-badge badge-blanco">Vino Blanco</div>
+                    <div class="wine-image-container" onclick="openModal('Amor del Bueno', 'Vino Blanco', '2.00 €', './fotos/amor_del_bueno.jpg', 'Vino blanco joven, estimulante y jovial. Resalta por sus tonos melosos y cítricos con trago ligero y ameno.')">
+                        <img src="./fotos/amor_del_bueno.jpg" alt="Vino Blanco Amor del Bueno" loading="lazy" class="wine-image">
+                        <div class="image-overlay">
+                            <span class="view-btn">Ampliar detalles</span>
+                        </div>
+                    </div>
+                    <div class="wine-info">
+                        <h3 class="wine-title">Amor del Bueno Frizzante </h3>
+                        <p class="wine-notes">Blanco Joven • Expresivo, meloso y refrescante. Ideal para un brindis distendido.</p>
+                        <div class="wine-footer">
+                            <div class="wine-price-container">
+                                <span class="price-label">Precio</span>
+                                <span class="wine-price">2.00 €</span>
+                            </div>
+                            <button class="btn-detail" onclick="openModal('Amor del Bueno', 'Vino Blanco', '2.00 €', './fotos/amor_del_bueno.jpg', 'Vino blanco joven, estimulante y jovial. Resalta por sus tonos melosos y cítricos con trago ligero y ameno.')">
+                                Ver ficha
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VINO 10: Pozanco Verdejo -->
+                <div class="wine-card" data-category="blanco" data-name="pozanco verdejo blanco">
+                    <div class="wine-card-badge badge-blanco">Vino Blanco</div>
+                    <div class="wine-image-container" onclick="openModal('Pozanco Verdejo', 'Vino Blanco Verdejo', '2.00 €', './fotos/pozanco_Verdejo.png', 'Verdejo brillante con recuerdos a manzana verde, pomelo y hierba recién cortada. Final limpio y persistentemente fresco.')">
+                        <img src="./fotos/pozanco_Verdejo.png" alt="Vino Blanco Pozanco Verdejo" loading="lazy" class="wine-image">
+                        <div class="image-overlay">
+                            <span class="view-btn">Ampliar detalles</span>
+                        </div>
+                    </div>
+                    <div class="wine-info">
+                        <h3 class="wine-title">Pozanco Verdejo</h3>
+                        <p class="wine-notes">100% Verdejo • Gran frescura, matices florales, cítricos y vivacidad única.</p>
+                        <div class="wine-footer">
+                            <div class="wine-price-container">
+                                <span class="price-label">Precio</span>
+                                <span class="wine-price">2.00 €</span>
+                            </div>
+                            <button class="btn-detail" onclick="openModal('Pozanco Verdejo', 'Vino Blanco Verdejo', '2.00 €', './fotos/pozanco_Verdejo.png', 'Verdejo brillante con recuerdos a manzana verde, pomelo y hierba recién cortada. Final limpio y persistentemente fresco.')">
+                                Ver ficha
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VINO 11: Barbadillo -->
+                <div class="wine-card" data-category="blanco" data-name="barbadillo blanco castillo san diego">
+                    <div class="wine-card-badge badge-blanco">Vino Blanco</div>
+                    <div class="wine-image-container" onclick="openModal('Barbadillo', 'Vino Blanco Palomino', '2.00 €', './fotos/barbadillo.jpg', 'Castillo de San Diego (100% Palomino Fino). Blanco gaditano icónico, extremadamente frutal, suave, ligero y fácil de beber.')">
+                        <img src="./fotos/barbadillo.jpg" alt="Vino Blanco Barbadillo" loading="lazy" class="wine-image">
+                        <div class="image-overlay">
+                            <span class="view-btn">Ampliar detalles</span>
+                        </div>
+                    </div>
+                    <div class="wine-info">
+                        <h3 class="wine-title">Barbadillo</h3>
+                        <p class="wine-notes">Palomino Fino • Inconfundible clásico, ligero, muy sabroso y aromático.</p>
+                        <div class="wine-footer">
+                            <div class="wine-price-container">
+                                <span class="price-label">Precio</span>
+                                <span class="wine-price">2.00 €</span>
+                            </div>
+                            <button class="btn-detail" onclick="openModal('Barbadillo', 'Vino Blanco Palomino', '2.00 €', './fotos/barbadillo.jpg', 'Castillo de San Diego (100% Palomino Fino). Blanco gaditano icónico, extremadamente frutal, suave, ligero y fácil de beber.')">
+                                Ver ficha
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- Fin winesGrid -->
+
+            <div class="no-results" id="noResults" style="display: none;">
+                <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                <h3>No se encontraron vinos</h3>
+                <p>Prueba buscando otro nombre o cambiando el filtro seleccionado.</p>
+                <button class="btn btn-secondary" onclick="filterWines('todos')">Ver todos los vinos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN EXPERIENCIA DE INVIERNO -->
+    <section class="experience-section" id="experiencia">
+        <div class="container">
+            <div class="experience-grid">
+                <div class="experience-text">
+                    <span class="section-subtitle">EL RINCÓN DE LA PONDEROSA</span>
+                    <h2 class="section-title">Una Experiencia Acogedora de Invierno</h2>
+                    <p>
+                        En Bar La Ponderosa adaptamos nuestra propuesta para ofrecerte el mejor ambiente en los meses más fríos. Dejamos a un lado la prisa para concentrarnos en lo que mejor sabemos hacer: <strong>brindar el mejor vino por copa</strong>.
+                    </p>
+                    <p>
+                        Ya sea para desconectar tras el trabajo, reunirte con amigos o disfrutar de una charla tranquila, nuestra bodega te ofrece opciones tintas y blancas para todos los gustos.
+                    </p>
+
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">🍷</div>
+                            <div>
+                                <h4>Selección por Copas</h4>
+                                <p>Disfruta de vinos de calidad a precios accesibles desde 1.20 €.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">❄️</div>
+                            <div>
+                                <h4>Edición Invierno</h4>
+                                <p>Un espacio cálido e íntimo pensado exclusivamente para los amantes del vino.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🕒</div>
+                            <div>
+                                <h4>Horario Continuo</h4>
+                                <p>Abiertos diariamente de 11:30 h a 2:00 h sin interrupción.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card-box">
+                    <div class="experience-card-inner">
+                        <img src="./logo_ponderosa.jpeg" alt="Logo Bar La Ponderosa" class="exp-logo">
+                        <h3 class="exp-card-title">Bar La Ponderosa</h3>
+                        <p class="exp-card-subtitle">Bar de Vinos • Temporada de Invierno</p>
+                        <div class="exp-divider"></div>
+                        <div class="exp-badge">
+                            <span>Horario Especial</span>
+                            <strong>11:30 - 2:00</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / UBICACIÓN Y CONTACTO -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- COLUMNA 1: LOGO Y MARCA -->
+                <div class="footer-col brand-col">
+                    <img src="./logo_ponderosa.jpeg" alt="Logo Bar La Ponderosa" class="footer-logo">
+                    <p class="footer-tagline">
+                        Tu espacio de reunión y buen vino. Especialistas en hacer de cada copa un momento especial.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/bar_laponderosa" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            <span>@bar_laponderosa</span>
+                        </a>
+                        <a href="https://facebook.com/BarLaPonderosa" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            <span>Bar La Ponderosa</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- COLUMNA 2: HORARIO Y SERVICIO -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Horario de Invierno</h3>
+                    <div class="schedule-box">
+                        <div class="schedule-row">
+                            <span class="days">Lunes a Domingo</span>
+                            <span class="hours">11:30 h - 02:00 h</span>
+                        </div>
+                        <p class="schedule-note">
+                            * Servicio de carta de vinos disponible ininterrumpidamente.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- COLUMNA 3: NAVEGACIÓN RÁPIDA -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Categorías de Vinos</h3>
+                    <ul class="footer-menu">
+                        <li><a href="#carta" onclick="filterWines('todos')">Todos los Vinos (11)</a></li>
+                        <li><a href="#carta" onclick="filterWines('tinto')">Vinos Tintos (4)</a></li>
+                        <li><a href="#carta" onclick="filterWines('blanco')">Vinos Blancos (7)</a></li>
+                        <li><a href="#experiencia">Experiencia Bar La Ponderosa</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bar La Ponderosa. Todos los derechos reservados. • Carta Digital de Invierno</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DE DETALLE DE VINO -->
+    <div class="modal-overlay" id="wineModal" onclick="closeModalOnOverlay(event)">
+        <div class="modal-card">
+            <button class="modal-close-btn" onclick="closeModal()" aria-label="Cerrar modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-wrapper">
+                    <img src="" id="modalImg" alt="Foto del vino" class="modal-image">
+                </div>
+                <div class="modal-details">
+                    <span class="modal-badge" id="modalCategory">Vino Tinto</span>
+                    <h2 class="modal-title" id="modalTitle">Nombre del Vino</h2>
+                    <div class="modal-price-box">
+                        <span class="modal-price-label">Precio Copa / Botella</span>
+                        <span class="modal-price" id="modalPrice">0.00 €</span>
+                    </div>
+                    <div class="modal-divider"></div>
+                    <h4>Notas de Cata y Detalles:</h4>
+                    <p class="modal-description" id="modalDescription">Descripción extendida del vino...</p>
+                    <button class="btn btn-primary modal-close-action" onclick="closeModal()">Cerrar Vista</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>
