@@ -131,6 +131,12 @@ button {
     color: var(--accent-gold-light);
 }
 
+.social-top-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .social-top-links a {
     display: flex;
     align-items: center;

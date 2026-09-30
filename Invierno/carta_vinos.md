@@ -3,6 +3,7 @@ Redes Sociales:
 
 -Instagram: @bar_laponderosa
 -Facebook:  Bar La Ponderosa
+-Teléfono: 693789032
  
 Vino Tinto Viña Puebla Tempranillo- 1.80
 Vino Tinto Albai - 1.50
